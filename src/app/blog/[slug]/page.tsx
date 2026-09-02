@@ -60,9 +60,9 @@ export default async function ArticuloDetallePage({ params }: Props) {
           </h1>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', fontSize: '0.875rem', color: '#64748b', flexWrap: 'wrap' }}>
-            <span>✍️ Escrito por: <strong>{articulo.autor}</strong></span>
-            <span>📅 {articulo.fecha}</span>
-            <span>⏱ {articulo.tiempoLectura}</span>
+            <span>Escrito por: <strong>{articulo.autor}</strong></span>
+            <span>Fecha: {articulo.fecha}</span>
+            <span>Lectura: {articulo.tiempoLectura}</span>
           </div>
         </header>
 

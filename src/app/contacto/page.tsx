@@ -28,29 +28,29 @@ export default function ContactoPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', fontSize: '0.95rem' }}>
               <div>
-                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>📍 Dirección Física:</strong>
+                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>Dirección Física:</strong>
                 <p style={{ color: 'var(--color-text-muted)' }}>
                   Centro Médico Especializado, Torre B, Piso 4, Consultorios 4-B y 4-C.
                 </p>
               </div>
 
               <div>
-                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>📞 Central Telefónica:</strong>
+                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>Central Telefónica:</strong>
                 <p style={{ color: 'var(--color-text-muted)' }}>+58 (000) 000-0000 / +58 (000) 111-2222</p>
               </div>
 
               <div>
-                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>💬 WhatsApp Coordinación Médica:</strong>
+                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>WhatsApp Coordinación Médica:</strong>
                 <p style={{ color: 'var(--color-text-muted)' }}>+58 (412) 000-0000 (Atención rápida)</p>
               </div>
 
               <div>
-                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>✉️ Correo Institucional:</strong>
+                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>Correo Institucional:</strong>
                 <p style={{ color: 'var(--color-text-muted)' }}>consultas@centroespecialidadesdigestivas.com</p>
               </div>
 
               <div>
-                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>🕒 Horario de Atención:</strong>
+                <strong style={{ color: 'var(--color-primary-dark)', display: 'block' }}>Horario de Atención:</strong>
                 <p style={{ color: 'var(--color-text-muted)' }}>Lunes a Viernes: 8:00 AM – 5:30 PM | Sábados: 8:30 AM – 1:00 PM</p>
               </div>
             </div>

@@ -10,42 +10,36 @@ export default function ServiciosPage() {
   const servicios = [
     {
       titulo: 'Gastroscopia Superior Diagnóstica & Terapéutica',
-      icono: '🔬',
       descripcion: 'Exploración visual directa del esófago, estómago y duodeno con videoendoscopios de alta definición. Permite la toma de biopsias, hemostasia de sangrado y extracción de lesiones gástricas tempranas.',
       indicaciones: ['Acidez refractaria', 'Dificultad o dolor para tragar', 'Sospecha de úlcera péptica', 'Pesadez y dolor en la boca del estómago'],
       duracion: '15 - 20 minutos con sedación asistida'
     },
     {
       titulo: 'Colonoscopia Total & Polipectomía',
-      icono: '🩺',
       descripcion: 'Examen exhaustivo del colon y recto para prevención activa del cáncer colorrectal. Si se encuentran pólipos, se realiza resección inmediata (polipectomía endoscópica) sin dolor.',
       indicaciones: ['Cribado preventivo a partir de los 45 años', 'Sangrado rectal o anemia no explicada', 'Cambio persistente en el ritmo evacuatorio'],
       duracion: '25 - 35 minutos con sedación monitorizada'
     },
     {
       titulo: 'Test de Aire Espirado (SIBO & Malabsorción)',
-      icono: '💨',
       descripcion: 'Prueba funcional respiratoria no invasiva para la detección de sobrecrecimiento bacteriano en intestino delgado (SIBO) e intolerancia a carbohidratos (lactosa y fructosa).',
       indicaciones: ['Distensión y gases crónicos postprandiales', 'Diarreas funcionales o dolor cólico', 'Sospecha de disbiosis bacteriana'],
       duracion: 'Estudio ambulatorio de 2 a 3 horas'
     },
     {
       titulo: 'Consulta de Hepatología & Fibrosis Hepática',
-      icono: '🧬',
       descripcion: 'Evaluación integral del hígado graso metabólico (MASLD/MASH), cirrosis, hepatitis virales y enfermedades colestásicas con protocolos de estratificación de riesgo no invasivo.',
       indicaciones: ['Ecografía con infiltración grasa', 'Enzimas hepáticas (TGO/TGP) elevadas', 'Monitoreo de hepatopatías crónicas'],
       duracion: 'Consulta clínica de 45 minutos'
     },
     {
       titulo: 'Cirugía Digestiva Laparoscópica Mínimamente Invasiva',
-      icono: '⚡',
       descripcion: 'Procedimientos quirúrgicos laparoscópicos de vesícula biliar (colecistectomía), reparación de hernias abdominales y cirugía antirreflujo (funduplicatura) con rápida reinserción.',
       indicaciones: ['Cálculos biliares (litiasis vesicular)', 'Hernia hiatal con reflujo severo', 'Colecistitis aguda o crónica'],
       duracion: 'Cirugía programada ambulatoria o estancia corta'
     },
     {
       titulo: 'Nutrición Clínica en Trastornos Digestivos',
-      icono: '🥗',
       descripcion: 'Planes nutricionales terapéuticos personalizados basados en protocolos Low-FODMAP, dietas antiinflamatorias y restauración de la permeabilidad intestinal.',
       indicaciones: ['Síndrome de Intestino Irritable', 'Intolerancias alimentarias múltiples', 'Hígado graso no alcohólico'],
       duracion: 'Consulta y seguimiento nutricional'
@@ -67,7 +61,6 @@ export default function ServiciosPage() {
           {servicios.map((srv, idx) => (
             <div key={idx} className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
               <div>
-                <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.75rem' }}>{srv.icono}</span>
                 <h2 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginBottom: '0.75rem', lineHeight: '1.35' }}>
                   {srv.titulo}
                 </h2>

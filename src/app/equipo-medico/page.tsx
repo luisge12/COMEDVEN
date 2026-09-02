@@ -34,7 +34,9 @@ export default function EquipoMedicoPage() {
                 textAlign: 'center',
                 padding: '1.5rem'
               }}>
-                <span style={{ fontSize: '5rem', marginBottom: '0.5rem' }}>{medico.fotoEmoji}</span>
+                <span style={{ fontSize: '3rem', fontWeight: 800, color: 'var(--color-primary)', marginBottom: '0.5rem' }}>
+                  {medico.iniciales}
+                </span>
                 <span style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-primary)' }}>
                   {medico.registro}
                 </span>

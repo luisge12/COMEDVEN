@@ -17,25 +17,22 @@ export default function DualViewCard({ enfermedad, initialMode = 'publico' }: Pr
       
       {/* Encabezado de la Tarjeta */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <span style={{ fontSize: '2rem' }}>{enfermedad.icono}</span>
-          <div>
-            <span style={{
-              display: 'inline-block',
-              fontSize: '0.75rem',
-              fontWeight: 700,
-              textTransform: 'uppercase',
-              color: 'var(--color-accent)',
-              backgroundColor: 'var(--color-primary-light)',
-              padding: '0.2rem 0.6rem',
-              borderRadius: 'var(--radius-full)'
-            }}>
-              {enfermedad.categoria}
-            </span>
-            <h3 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginTop: '0.25rem', fontFamily: 'var(--font-family-heading)' }}>
-              {enfermedad.nombre}
-            </h3>
-          </div>
+        <div>
+          <span style={{
+            display: 'inline-block',
+            fontSize: '0.75rem',
+            fontWeight: 700,
+            textTransform: 'uppercase',
+            color: 'var(--color-accent)',
+            backgroundColor: 'var(--color-primary-light)',
+            padding: '0.2rem 0.6rem',
+            borderRadius: 'var(--radius-full)'
+          }}>
+            {enfermedad.categoria}
+          </span>
+          <h3 style={{ fontSize: '1.25rem', color: 'var(--color-primary)', marginTop: '0.35rem', fontFamily: 'var(--font-family-heading)' }}>
+            {enfermedad.nombre}
+          </h3>
         </div>
       </div>
 
@@ -62,7 +59,7 @@ export default function DualViewCard({ enfermedad, initialMode = 'publico' }: Pr
             transition: 'var(--transition-smooth)'
           }}
         >
-          👤 Paciente
+          Vista Paciente
         </button>
         <button
           onClick={() => setMode('medico')}
@@ -78,7 +75,7 @@ export default function DualViewCard({ enfermedad, initialMode = 'publico' }: Pr
             transition: 'var(--transition-smooth)'
           }}
         >
-          🩺 Personal Médico
+          Personal Médico
         </button>
       </div>
 
@@ -100,7 +97,7 @@ export default function DualViewCard({ enfermedad, initialMode = 'publico' }: Pr
               </ul>
             </div>
             <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '0.75rem', borderRadius: 'var(--radius-sm)', fontSize: '0.85rem', color: 'var(--color-primary-dark)', marginBottom: '1rem' }}>
-              💡 <strong>Consejo:</strong> {enfermedad.publicoGeneral.recomendaciones}
+              <strong>Recomendación:</strong> {enfermedad.publicoGeneral.recomendaciones}
             </div>
           </div>
         ) : (
@@ -122,7 +119,7 @@ export default function DualViewCard({ enfermedad, initialMode = 'publico' }: Pr
               </p>
             </div>
             <div style={{ backgroundColor: '#ecfdf5', borderLeft: '3px solid var(--color-success)', padding: '0.65rem 0.85rem', borderRadius: '0 var(--radius-sm) var(--radius-sm) 0', fontSize: '0.85rem', color: '#065f46', marginBottom: '1rem' }}>
-              ⚕️ <strong>Manejo:</strong> {enfermedad.personalSalud.manejoTerapeutico}
+              <strong>Manejo:</strong> {enfermedad.personalSalud.manejoTerapeutico}
             </div>
           </div>
         )}

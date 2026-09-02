@@ -23,7 +23,7 @@ export default function Navbar() {
       {/* Barra de Contacto Superior */}
       <aside suppressHydrationWarning style={{ backgroundColor: 'var(--color-primary-dark)', color: '#ffffff', fontSize: '0.85rem', padding: '0.5rem 0' }}>
         <div className="container" suppressHydrationWarning style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-          <p suppressHydrationWarning style={{ margin: 0 }}>📞 Consultas: +58 (000) 000-0000 | 📍 Centro Médico Especializado</p>
+          <p suppressHydrationWarning style={{ margin: 0 }}>Consultas: +58 (000) 000-0000 | Centro Médico Especializado</p>
           <div suppressHydrationWarning style={{ display: 'flex', gap: '1.25rem' }}>
             <span>Horario: Lun - Vie 8:00 AM - 5:00 PM</span>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#67e8f9' }}>
@@ -47,7 +47,6 @@ export default function Navbar() {
           
           {/* Logotipo */}
           <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontWeight: 800, fontSize: '1.2rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)' }}>
-            <span style={{ fontSize: '1.6rem' }}>🩺</span>
             <span>Centro de Especialidades Digestivas</span>
           </Link>
 

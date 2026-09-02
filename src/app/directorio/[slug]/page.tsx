@@ -41,10 +41,9 @@ export default async function EnfermedadDetallePage({ params }: Props) {
 
         {/* Encabezado Principal */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-          <span style={{ fontSize: '3rem' }}>{enfermedad.icono}</span>
           <div>
             <span className="section-tag">{enfermedad.categoria}</span>
-            <h1 style={{ fontFamily: 'var(--font-family-heading)', color: 'var(--color-primary-dark)', fontSize: '2.2rem', lineHeight: '1.2' }}>
+            <h1 style={{ fontFamily: 'var(--font-family-heading)', color: 'var(--color-primary-dark)', fontSize: '2.2rem', lineHeight: '1.2', marginTop: '0.5rem' }}>
               {enfermedad.nombre}
             </h1>
           </div>
@@ -53,7 +52,6 @@ export default async function EnfermedadDetallePage({ params }: Props) {
         {/* Panel 1: Sección para el Paciente */}
         <div className="card" style={{ marginBottom: '2rem', borderTop: '4px solid var(--color-accent)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <span style={{ fontSize: '1.5rem' }}>👤</span>
             <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem' }}>
               Guía para el Paciente (Lenguaje Accesible)
             </h2>
@@ -82,14 +80,13 @@ export default async function EnfermedadDetallePage({ params }: Props) {
           </div>
 
           <div style={{ backgroundColor: '#fffbeb', borderLeft: '4px solid var(--color-warning)', padding: '1rem', borderRadius: '0 var(--radius-sm) var(--radius-sm) 0', fontSize: '0.9rem', color: '#92400e' }}>
-            ⚠️ <strong>¿Cuándo acudir al especialista?</strong> {enfermedad.publicoGeneral.cuandoConsultar}
+            <strong>¿Cuándo acudir al especialista?</strong> {enfermedad.publicoGeneral.cuandoConsultar}
           </div>
         </div>
 
         {/* Panel 2: Sección para el Personal de la Salud */}
         <div className="card" style={{ marginBottom: '2.5rem', borderTop: '4px solid var(--color-primary)' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-            <span style={{ fontSize: '1.5rem' }}>🩺</span>
             <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem' }}>
               Ficha Clínico-Científica (Personal de la Salud)
             </h2>
@@ -123,7 +120,7 @@ export default async function EnfermedadDetallePage({ params }: Props) {
           </div>
 
           <div style={{ backgroundColor: '#f1f5f9', padding: '1rem', borderRadius: 'var(--radius-sm)', fontSize: '0.875rem', color: '#334155' }}>
-            💡 <strong>Perla Clínica:</strong> {enfermedad.personalSalud.perlasClinicas}
+            <strong>Perla Clínica:</strong> {enfermedad.personalSalud.perlasClinicas}
           </div>
         </div>
 

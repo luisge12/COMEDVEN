@@ -5,7 +5,7 @@ export interface Medico {
   subespecialidad: string;
   registro: string;
   colegio: string;
-  fotoEmoji: string;
+  iniciales: string;
   horario: string;
   dias: string;
   biografia: string;
@@ -20,7 +20,7 @@ export const medicosData: Medico[] = [
     subespecialidad: "Endoscopia Terapéutica Avanzada y Colonoscopia",
     registro: "MPPS: 84920",
     colegio: "Col. Médico: 4921",
-    fotoEmoji: "👨‍⚕️",
+    iniciales: "AM",
     horario: "8:00 AM - 1:00 PM",
     dias: "Lunes, Miércoles y Viernes",
     biografia: "Especialista con más de 16 años de trayectoria clínica en centros hospitalarios de referencia. Experto en polipectomías complejas, hemostasia endoscópica y manejo de lesiones mucosas premalignas.",
@@ -37,7 +37,7 @@ export const medicosData: Medico[] = [
     subespecialidad: "Motilidad Gastrointestinal y Eje Intestino-Cerebro",
     registro: "MPPS: 92831",
     colegio: "Col. Médico: 5120",
-    fotoEmoji: "👩‍⚕️",
+    iniciales: "MC",
     horario: "1:30 PM - 5:30 PM",
     dias: "Martes, Jueves y Sábados",
     biografia: "Dedicada al diagnóstico integral de afecciones hepáticas metabólicas, hepatitis virales, sobrecrecimiento bacteriano (SIBO) y patologías funcionales del tubo digestivo.",
@@ -54,7 +54,7 @@ export const medicosData: Medico[] = [
     subespecialidad: "Laparoscopia Digestiva Mínimamente Invasiva",
     registro: "MPPS: 77412",
     colegio: "Col. Médico: 3980",
-    fotoEmoji: "👨‍⚕️",
+    iniciales: "CG",
     horario: "9:00 AM - 2:00 PM",
     dias: "Lunes a Jueves",
     biografia: "Cirujano especialista en procedimientos de vesícula biliar, reflujo gastroesofágico resistente (funduplicatura) y patología herniaria de la pared abdominal.",

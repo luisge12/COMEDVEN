@@ -2,7 +2,6 @@ export interface Enfermedad {
   id: string;
   nombre: string;
   categoria: string;
-  icono: string;
   publicoGeneral: {
     resumen: string;
     sintomas: string[];
@@ -22,7 +21,6 @@ export const enfermedadesData: Enfermedad[] = [
     id: "reflujo-gastroesofagico",
     nombre: "Enfermedad por Reflujo Gastroesofágico (ERGE)",
     categoria: "Esofágicas",
-    icono: "🔥",
     publicoGeneral: {
       resumen: "Ocurre cuando el contenido ácido del estómago regresa de forma repetida hacia el esófago, irritando el tejido interno y provocando ardor detrás del pecho.",
       sintomas: [
@@ -45,7 +43,6 @@ export const enfermedadesData: Enfermedad[] = [
     id: "sindrome-intestino-irritable",
     nombre: "Síndrome de Intestino Irritable (SII)",
     categoria: "Intestinales",
-    icono: "🧬",
     publicoGeneral: {
       resumen: "Es un trastorno digestivo muy común que afecta el intestino grueso. Se manifiesta con dolores o cólicos abdominales, gases y alteraciones entre diarrea y estreñimiento.",
       sintomas: [
@@ -68,7 +65,6 @@ export const enfermedadesData: Enfermedad[] = [
     id: "higado-graso-metabolico",
     nombre: "Hígado Graso No Alcohólico (MASLD)",
     categoria: "Hepáticas",
-    icono: "🩺",
     publicoGeneral: {
       resumen: "Es la acumulación excesiva de grasa en las células del hígado no atribuible al consumo de alcohol. Con frecuencia está vinculado a sobrepeso, diabetes y colesterol elevado.",
       sintomas: [

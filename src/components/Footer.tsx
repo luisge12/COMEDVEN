@@ -9,7 +9,7 @@ export default function Footer() {
         
         <div>
           <h3 style={{ color: '#ffffff', fontSize: '1.25rem', marginBottom: '1.25rem', fontFamily: 'var(--font-family-heading)' }}>
-            🩺 Centro de Especialidades Digestivas
+            Centro de Especialidades Digestivas
           </h3>
           <p style={{ fontSize: '0.925rem', lineHeight: '1.7', color: '#cbd5e1', marginBottom: '1.5rem' }}>
             Institución médica de referencia dedicada a la prevención, diagnóstico de alta resolución y tratamiento de afecciones del aparato digestivo y glándulas anexas.
@@ -33,10 +33,10 @@ export default function Footer() {
 
         <div>
           <h4 style={{ color: '#ffffff', fontSize: '1.05rem', marginBottom: '1.25rem' }}>Canales Oficiales & Contacto</h4>
-          <p style={{ fontSize: '0.925rem', marginBottom: '0.6rem' }}>📍 Torre Médica Especializada, Piso 4, Consultorio 4-B</p>
-          <p style={{ fontSize: '0.925rem', marginBottom: '0.6rem' }}>📞 Central: +58 (000) 000-0000</p>
-          <p style={{ fontSize: '0.925rem', marginBottom: '0.6rem' }}>💬 WhatsApp Directo: +58 (000) 000-0000</p>
-          <p style={{ fontSize: '0.925rem', marginBottom: '1.25rem' }}>📺 Canal Educativo en YouTube: @CentroEspecialidadesDigestivas</p>
+          <p style={{ fontSize: '0.925rem', marginBottom: '0.6rem' }}>Dirección: Torre Médica Especializada, Piso 4, Consultorio 4-B</p>
+          <p style={{ fontSize: '0.925rem', marginBottom: '0.6rem' }}>Central: +58 (000) 000-0000</p>
+          <p style={{ fontSize: '0.925rem', marginBottom: '0.6rem' }}>WhatsApp Directo: +58 (000) 000-0000</p>
+          <p style={{ fontSize: '0.925rem', marginBottom: '1.25rem' }}>Canal Educativo en YouTube: @CentroEspecialidadesDigestivas</p>
           <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.8rem', color: '#94a3b8' }}>
             Nota: Este portal ofrece información médica orientativa y no sustituye la consulta facultativa presencial.
           </div>

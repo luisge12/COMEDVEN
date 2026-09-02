@@ -23,15 +23,15 @@ export default function AppointmentForm() {
     e.preventDefault();
 
     const mensaje = `Hola, deseo confirmar mi solicitud de cita médica en el *Centro de Especialidades Digestivas*:\n\n` +
-      `👤 *Paciente:* ${formData.nombre}\n` +
-      `🆔 *Cédula/ID:* ${formData.cedula}\n` +
-      `📞 *Teléfono:* ${formData.telefono}\n` +
-      `🩺 *Especialista:* ${formData.medico || 'Cualquier especialista disponible'}\n` +
-      `📋 *Servicio:* ${formData.servicio}\n` +
-      `📅 *Fecha solicitada:* ${formData.fecha}\n` +
-      `⏰ *Turno:* ${formData.turno}\n` +
-      `💳 *Modalidad de Pago:* ${formData.metodoPago}\n` +
-      `📝 *Motivo breve:* ${formData.motivo || 'Consulta preventiva'}`;
+      `*Paciente:* ${formData.nombre}\n` +
+      `*Cédula/ID:* ${formData.cedula}\n` +
+      `*Teléfono:* ${formData.telefono}\n` +
+      `*Especialista:* ${formData.medico || 'Cualquier especialista disponible'}\n` +
+      `*Servicio:* ${formData.servicio}\n` +
+      `*Fecha solicitada:* ${formData.fecha}\n` +
+      `*Turno:* ${formData.turno}\n` +
+      `*Modalidad de Pago:* ${formData.metodoPago}\n` +
+      `*Motivo:* ${formData.motivo || 'Consulta preventiva'}`;
 
     const urlWhatsApp = `https://wa.me/584120000000?text=${encodeURIComponent(mensaje)}`;
     
@@ -43,7 +43,6 @@ export default function AppointmentForm() {
     <div className="card" style={{ padding: '2.5rem', boxShadow: 'var(--shadow-lg)' }}>
       {enviado ? (
         <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
-          <span style={{ fontSize: '3.5rem' }}>✅</span>
           <h3 style={{ color: 'var(--color-primary)', marginTop: '1rem', marginBottom: '0.5rem' }}>
             ¡Solicitud de Cita Iniciada!
           </h3>
@@ -180,7 +179,6 @@ export default function AppointmentForm() {
             {/* Pasarela y Modalidad de Pago */}
             <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid #cbd5e1' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <span style={{ fontSize: '1.25rem' }}>💳</span>
                 <h4 style={{ color: 'var(--color-primary-dark)', fontSize: '0.95rem' }}>Modalidad de Pago & Pasarela</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: 'var(--color-text-muted)', marginBottom: '0.75rem' }}>
@@ -207,7 +205,7 @@ export default function AppointmentForm() {
               className="btn btn-accent"
               style={{ width: '100%', padding: '1rem', fontSize: '1.1rem', marginTop: '0.5rem' }}
             >
-              📅 Confirmar y Enviar Solicitud de Cita
+              Confirmar y Enviar Solicitud de Cita
             </button>
 
           </div>

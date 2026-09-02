@@ -23,7 +23,6 @@ export default function NosotrosPage() {
         {/* Misión y Visión */}
         <div className="grid-2" style={{ marginBottom: '4.5rem' }}>
           <div className="card" style={{ borderLeft: '4px solid var(--color-primary)' }}>
-            <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.5rem' }}>🎯</span>
             <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Nuestra Misión</h2>
             <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}>
               Brindar atención gastroenterológica, hepatológica y endoscópica de primer nivel mediante un abordaje cálido y riguroso. Nos enfocamos en la detección temprana de patologías digestivas y el alivio sostenible de condiciones funcionales mediante tecnología diagnóstica de vanguardia.
@@ -31,7 +30,6 @@ export default function NosotrosPage() {
           </div>
 
           <div className="card" style={{ borderLeft: '4px solid var(--color-accent)' }}>
-            <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.5rem' }}>👁️</span>
             <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Nuestra Visión</h2>
             <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}>
               Consolidarnos como el centro de referencia líder en salud gastrointestinal y motilidad digestiva, reconocidos nacional e internacionalmente por nuestro aporte a la investigación médica, docencia continua y prevención activa de neoplasias digestivas.
@@ -50,7 +48,6 @@ export default function NosotrosPage() {
 
         <div className="grid-3" style={{ marginBottom: '4rem' }}>
           <div className="card">
-            <span style={{ fontSize: '2rem' }}>🎓</span>
             <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
               Simposio de Motilidad & Eje Microbiota
             </h3>
@@ -61,7 +58,6 @@ export default function NosotrosPage() {
           </div>
 
           <div className="card">
-            <span style={{ fontSize: '2rem' }}>🔬</span>
             <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
               Talleres Prácticos de Endoscopia
             </h3>
@@ -72,7 +68,6 @@ export default function NosotrosPage() {
           </div>
 
           <div className="card">
-            <span style={{ fontSize: '2rem' }}>🗣️</span>
             <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
               Campañas de Detección Temprana
             </h3>

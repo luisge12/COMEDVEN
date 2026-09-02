@@ -36,10 +36,10 @@ export default function Home() {
             </p>
             <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
               <Link href="/citas" className="btn btn-accent" style={{ fontSize: '1.05rem', padding: '0.85rem 1.8rem' }}>
-                📅 Agendar Consulta en Línea
+                Agendar Consulta en Línea
               </Link>
               <Link href="/directorio" className="btn btn-outline" style={{ fontSize: '1.05rem', padding: '0.85rem 1.8rem' }}>
-                📖 Consultar Enfermedades
+                Consultar Enfermedades
               </Link>
             </div>
           </div>
@@ -58,13 +58,13 @@ export default function Home() {
             </h3>
             <ul style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.75rem', fontSize: '0.95rem', color: 'var(--color-text-main)' }}>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--color-success)', fontWeight: 800 }}>✓</span> Sedación consciente sin dolor en endoscopias
+                <span style={{ color: 'var(--color-success)', fontWeight: 800 }}>•</span> Sedación consciente sin dolor en endoscopias
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--color-success)', fontWeight: 800 }}>✓</span> Resultados e informes histopatológicos oportunos
+                <span style={{ color: 'var(--color-success)', fontWeight: 800 }}>•</span> Resultados e informes histopatológicos oportunos
               </li>
               <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                <span style={{ color: 'var(--color-success)', fontWeight: 800 }}>✓</span> Vista médica orientada a pacientes y personal de salud
+                <span style={{ color: 'var(--color-success)', fontWeight: 800 }}>•</span> Vista médica orientada a pacientes y personal de salud
               </li>
             </ul>
             <Link href="/citas" className="btn btn-primary" style={{ width: '100%', padding: '0.9rem' }}>
@@ -92,7 +92,6 @@ export default function Home() {
 
           <div className="grid-3">
             <div className="card">
-              <span style={{ fontSize: '2.2rem' }}>🔬</span>
               <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0', fontSize: '1.3rem' }}>
                 Gastroscopia de Alta Definición
               </h3>
@@ -105,7 +104,6 @@ export default function Home() {
             </div>
 
             <div className="card">
-              <span style={{ fontSize: '2.2rem' }}>🩺</span>
               <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0', fontSize: '1.3rem' }}>
                 Colonoscopia Preventiva
               </h3>
@@ -118,7 +116,6 @@ export default function Home() {
             </div>
 
             <div className="card">
-              <span style={{ fontSize: '2.2rem' }}>💨</span>
               <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0', fontSize: '1.3rem' }}>
                 Test de Aire Espirado (SIBO)
               </h3>
@@ -176,10 +173,12 @@ export default function Home() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '3.5rem',
+                  fontSize: '2rem',
+                  fontWeight: 800,
+                  color: 'var(--color-primary)',
                   marginBottom: '1rem'
                 }}>
-                  {m.fotoEmoji}
+                  {m.iniciales}
                 </div>
                 <h3 style={{ color: 'var(--color-primary)', fontSize: '1.25rem', marginBottom: '0.25rem' }}>{m.nombre}</h3>
                 <p style={{ color: 'var(--color-accent)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.5rem' }}>{m.especialidad}</p>

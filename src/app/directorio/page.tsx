@@ -35,13 +35,12 @@ export default function DirectorioPage() {
           gap: '1.5rem',
           flexWrap: 'wrap'
         }}>
-          <div style={{ fontSize: '2rem' }}>💡</div>
           <div style={{ flex: 1 }}>
             <h4 style={{ color: 'var(--color-primary)', fontSize: '1rem', marginBottom: '0.25rem' }}>
               ¿Cómo funciona la Vista Dual?
             </h4>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.5' }}>
-              Utiliza el botón <strong>&ldquo;👤 Paciente&rdquo;</strong> para comprender causas, síntomas y recomendaciones sencillas, o selecciona <strong>&ldquo;🩺 Personal Médico&rdquo;</strong> para acceder a fisiopatología, criterios Roma/Lyon, escalas endoscópicas y farmacoterapia de primera línea.
+              Utiliza el botón <strong>&ldquo;Vista Paciente&rdquo;</strong> para comprender causas, síntomas y recomendaciones sencillas, o selecciona <strong>&ldquo;Personal Médico&rdquo;</strong> para acceder a fisiopatología, criterios Roma/Lyon, escalas endoscópicas y farmacoterapia de primera línea.
             </p>
           </div>
         </div>

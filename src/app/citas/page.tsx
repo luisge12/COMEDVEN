@@ -26,7 +26,7 @@ export default function CitasPage() {
         <div className="grid-2" style={{ marginTop: '3.5rem', gap: '1.5rem' }}>
           <div className="card" style={{ padding: '1.5rem' }}>
             <h3 style={{ color: 'var(--color-primary)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>
-              ℹ️ Preparación para Endoscopias
+              Preparación para Endoscopias
             </h3>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
               Para gastroscopias se requiere ayuno mínimo de 8 horas. Para colonoscopias se suministra un protocolo de preparación intestinal con 48 horas de anticipación.
@@ -35,7 +35,7 @@ export default function CitasPage() {
 
           <div className="card" style={{ padding: '1.5rem' }}>
             <h3 style={{ color: 'var(--color-primary)', fontSize: '1.1rem', marginBottom: '0.5rem' }}>
-              🛡️ Seguridad & Bioseguridad
+              Seguridad & Bioseguridad
             </h3>
             <p style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)', lineHeight: '1.6' }}>
               Todas las endoscopias se realizan bajo supervisión de un médico anestesiólogo certificado y desinfección automatizada de alto nivel en cada procedimiento.
