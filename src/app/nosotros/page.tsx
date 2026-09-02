@@ -11,28 +11,28 @@ export default function NosotrosPage() {
     <div className="section">
       <div className="container">
         
-        {/* Encabezado */}
-        <div className="section-title-wrap">
+        {/* Encabezado: ¿Quiénes Somos? */}
+        <div className="section-title-wrap" style={{ maxWidth: '850px' }}>
           <span className="section-tag">Institucional</span>
-          <h1 className="section-title">Ciencia, Ética y Compromiso Digestivo</h1>
-          <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.1rem' }}>
-            Dedicados a elevar la calidad de vida de nuestros pacientes mediante medicina preventiva y terapéutica basada en evidencia.
+          <h1 className="section-title">¿Quiénes Somos?</h1>
+          <p style={{ color: 'var(--color-text-main)', marginTop: '1.25rem', fontSize: '1.15rem', lineHeight: '1.8' }}>
+            El Centro de Endoscopias y Especialidades Digestivas es una Unidad Médica y Quirúrgica especializada en la atención de pacientes con patologías del tracto digestivo y evacuatorio. Nuestro objetivo es garantizar que nuestros pacientes gocen de una excelente salud y mejorar su calidad de vida para que pueden disfrutar a plenitud cada uno de sus días.
           </p>
         </div>
 
         {/* Misión y Visión */}
-        <div className="grid-2" style={{ marginBottom: '4.5rem' }}>
+        <div className="grid-2" style={{ marginBottom: '4.5rem', gap: '2rem' }}>
           <div className="card" style={{ borderLeft: '4px solid var(--color-primary)' }}>
-            <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Nuestra Misión</h2>
-            <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}>
-              Brindar atención gastroenterológica, hepatológica y endoscópica de primer nivel mediante un abordaje cálido y riguroso. Nos enfocamos en la detección temprana de patologías digestivas y el alivio sostenible de condiciones funcionales mediante tecnología diagnóstica de vanguardia.
+            <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Misión</h2>
+            <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
+              Proporcionar atención médica integral especializada para las enfermedades de las vías digestivas, con tecnología de vanguardia y un equipo humano altamente calificado y capacitado. Centramos nuestros esfuerzos en un diagnóstico preciso y tratamientos efectivos, guiados por principios éticos y un trato humano, para restaurar tu salud, bienestar y calidad de vida.
             </p>
           </div>
 
           <div className="card" style={{ borderLeft: '4px solid var(--color-accent)' }}>
-            <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Nuestra Visión</h2>
-            <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}>
-              Consolidarnos como el centro de referencia líder en salud gastrointestinal y motilidad digestiva, reconocidos nacional e internacionalmente por nuestro aporte a la investigación médica, docencia continua y prevención activa de neoplasias digestivas.
+            <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Visión</h2>
+            <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
+              Ser el principal centro de referencia en Coloproctología del país, ofreciendo diagnósticos tempranos y tratamientos de vanguardia adaptados a las necesidades particulares de cada paciente. Nuestro compromiso es proporcionarte una medicina de excelencia y altamente calificada, centrada en tu dignidad y calidad de vida, con un acceso equitativo y un firme compromiso social.
             </p>
           </div>
         </div>
