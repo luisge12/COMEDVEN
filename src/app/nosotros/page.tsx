@@ -1,0 +1,99 @@
+import { Metadata } from 'next';
+import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Acerca de Nosotros | Centro de Especialidades Digestivas',
+  description: 'Conoce la misión, visión, trayectoria profesional y actividades académicas del Centro de Especialidades Digestivas.',
+};
+
+export default function NosotrosPage() {
+  return (
+    <div className="section">
+      <div className="container">
+        
+        {/* Encabezado */}
+        <div className="section-title-wrap">
+          <span className="section-tag">Institucional</span>
+          <h1 className="section-title">Ciencia, Ética y Compromiso Digestivo</h1>
+          <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.1rem' }}>
+            Dedicados a elevar la calidad de vida de nuestros pacientes mediante medicina preventiva y terapéutica basada en evidencia.
+          </p>
+        </div>
+
+        {/* Misión y Visión */}
+        <div className="grid-2" style={{ marginBottom: '4.5rem' }}>
+          <div className="card" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+            <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.5rem' }}>🎯</span>
+            <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Nuestra Misión</h2>
+            <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}>
+              Brindar atención gastroenterológica, hepatológica y endoscópica de primer nivel mediante un abordaje cálido y riguroso. Nos enfocamos en la detección temprana de patologías digestivas y el alivio sostenible de condiciones funcionales mediante tecnología diagnóstica de vanguardia.
+            </p>
+          </div>
+
+          <div className="card" style={{ borderLeft: '4px solid var(--color-accent)' }}>
+            <span style={{ fontSize: '2.5rem', display: 'block', marginBottom: '0.5rem' }}>👁️</span>
+            <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Nuestra Visión</h2>
+            <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.7' }}>
+              Consolidarnos como el centro de referencia líder en salud gastrointestinal y motilidad digestiva, reconocidos nacional e internacionalmente por nuestro aporte a la investigación médica, docencia continua y prevención activa de neoplasias digestivas.
+            </p>
+          </div>
+        </div>
+
+        {/* Sección de Actividades Académicas y Eventos (Punto 1 de la cotización) */}
+        <div className="section-title-wrap">
+          <span className="section-tag">Educación Médica Continua</span>
+          <h2 className="section-title">Actividades Académicas & Eventos</h2>
+          <p style={{ color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
+            Fomentamos la actualización constante del gremio médico y la educación comunitaria de nuestros pacientes.
+          </p>
+        </div>
+
+        <div className="grid-3" style={{ marginBottom: '4rem' }}>
+          <div className="card">
+            <span style={{ fontSize: '2rem' }}>🎓</span>
+            <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
+              Simposio de Motilidad & Eje Microbiota
+            </h3>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              Jornada anual de actualización enfocada en avances terapéuticos en SII, SIBO y nuevas clasificaciones de Roma.
+            </p>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Evento Académico Anual</span>
+          </div>
+
+          <div className="card">
+            <span style={{ fontSize: '2rem' }}>🔬</span>
+            <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
+              Talleres Prácticos de Endoscopia
+            </h3>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              Entrenamiento en técnicas de polipectomía avanzada, cromoscopia virtual e inyección hemostática para médicos residentes.
+            </p>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Capacitación Hospitalaria</span>
+          </div>
+
+          <div className="card">
+            <span style={{ fontSize: '2rem' }}>🗣️</span>
+            <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
+              Campañas de Detección Temprana
+            </h3>
+            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
+              Charlas comunitarias abiertas sobre factores de riesgo, nutrición antiinflamatoria y el valor de la colonoscopia oportuna.
+            </p>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Difusión Abierta al Público</span>
+          </div>
+        </div>
+
+        <div style={{ textAlign: 'center', backgroundColor: 'var(--color-primary-light)', padding: '3rem', borderRadius: 'var(--radius-lg)' }}>
+          <h3 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }}>¿Deseas participar o consultar con nuestro equipo?</h3>
+          <p style={{ color: 'var(--color-text-muted)', maxWidth: '600px', margin: '0 auto 1.5rem auto' }}>
+            Nuestros especialistas están a tu disposición tanto para atención clínica como para colaboraciones científicas.
+          </p>
+          <Link href="/citas" className="btn btn-primary">
+            Contactar con el Centro
+          </Link>
+        </div>
+
+      </div>
+    </div>
+  );
+}
