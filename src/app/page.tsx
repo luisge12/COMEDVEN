@@ -163,32 +163,39 @@ export default function Home() {
             <h2 className="section-title">Nuestros Especialistas</h2>
           </div>
 
-          <div className="grid-3">
+          <div className="grid-4" style={{ gap: '1.5rem' }}>
             {medicosData.map(m => (
-              <div key={m.id} className="card" style={{ display: 'flex', flexDirection: 'column' }}>
-                <div style={{
-                  backgroundColor: 'var(--color-primary-light)',
-                  height: '140px',
-                  borderRadius: 'var(--radius-sm)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '2rem',
-                  fontWeight: 800,
-                  color: 'var(--color-primary)',
-                  marginBottom: '1rem'
-                }}>
-                  {m.iniciales}
+              <div key={m.id} className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '1.5rem' }}>
+                <div>
+                  <div style={{
+                    backgroundColor: 'var(--color-primary-light)',
+                    height: '110px',
+                    borderRadius: 'var(--radius-sm)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '1.75rem',
+                    fontWeight: 800,
+                    color: 'var(--color-primary)',
+                    marginBottom: '1rem'
+                  }}>
+                    {m.iniciales}
+                  </div>
+                  <span style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--color-accent)', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>
+                    {m.categoriaTitulo}
+                  </span>
+                  <h3 style={{ color: 'var(--color-primary-dark)', fontSize: '1.1rem', marginBottom: '0.35rem', lineHeight: '1.3' }}>
+                    {m.nombre}
+                  </h3>
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.825rem', marginBottom: '1rem', lineHeight: '1.4' }}>
+                    {m.especialidad}
+                  </p>
                 </div>
-                <h3 style={{ color: 'var(--color-primary)', fontSize: '1.25rem', marginBottom: '0.25rem' }}>{m.nombre}</h3>
-                <p style={{ color: 'var(--color-accent)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.5rem' }}>{m.especialidad}</p>
-                <p style={{ color: '#94a3b8', fontSize: '0.8rem', marginBottom: '1rem' }}>{m.registro} | {m.colegio}</p>
-                <p style={{ color: 'var(--color-text-muted)', fontSize: '0.875rem', lineHeight: '1.5', marginBottom: '1.5rem', flex: 1 }}>
-                  {m.biografia}
-                </p>
-                <Link href="/citas" className="btn btn-outline" style={{ width: '100%', fontSize: '0.85rem', padding: '0.5rem 0.75rem' }}>
-                  Agendar con Especialista
-                </Link>
+                <div>
+                  <Link href="/equipo-medico" className="btn btn-outline" style={{ width: '100%', fontSize: '0.8rem', padding: '0.45rem 0.6rem' }}>
+                    Ver Credenciales →
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
