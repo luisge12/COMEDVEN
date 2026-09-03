@@ -15,7 +15,6 @@ export default function Navbar() {
     { href: '/servicios', label: 'Servicios' },
     { href: '/directorio', label: 'Directorio Médico' },
     { href: '/blog', label: 'Blog' },
-    { href: '/contacto', label: 'Contacto' },
   ];
 
   return (

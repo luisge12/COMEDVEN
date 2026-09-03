@@ -171,9 +171,15 @@ export default function ServiciosPage() {
             <Link href="/citas" className="btn btn-primary" style={{ padding: '0.75rem 1.75rem' }}>
               Agendar Procedimiento o Consulta
             </Link>
-            <Link href="/contacto" className="btn btn-outline" style={{ padding: '0.75rem 1.75rem' }}>
-              Ver Ubicación de la Sede
-            </Link>
+            <a
+              href="https://maps.app.goo.gl/TgtAUNNr5yodezkW6?g_st=ipc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline"
+              style={{ padding: '0.75rem 1.75rem' }}
+            >
+              Ver Ubicación en Google Maps
+            </a>
           </div>
         </div>
 
