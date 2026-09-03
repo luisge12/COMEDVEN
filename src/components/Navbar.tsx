@@ -23,11 +23,13 @@ export default function Navbar() {
       {/* Barra de Contacto Superior */}
       <aside suppressHydrationWarning style={{ backgroundColor: 'var(--color-primary-dark)', color: '#ffffff', fontSize: '0.85rem', padding: '0.5rem 0' }}>
         <div className="container" suppressHydrationWarning style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-          <p suppressHydrationWarning style={{ margin: 0 }}>Consultas: +58 (000) 000-0000 | Centro Médico Especializado</p>
+          <p suppressHydrationWarning style={{ margin: 0 }}>
+            Atención: 0412-7542400 / 0212-5550340 | Policlínica La Arboleda, Piso 2, Consultorio 211
+          </p>
           <div suppressHydrationWarning style={{ display: 'flex', gap: '1.25rem' }}>
-            <span>Horario: Lun - Vie 8:00 AM - 5:00 PM</span>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#67e8f9' }}>
-              Canal YouTube
+            <span>Caracas, Distrito Capital</span>
+            <a href="https://instagram.com/tuendoscopia" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#67e8f9' }}>
+              Instagram: @tuendoscopia
             </a>
           </div>
         </div>

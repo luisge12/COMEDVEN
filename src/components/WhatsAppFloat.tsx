@@ -1,8 +1,8 @@
 'use client';
 
 export default function WhatsAppFloat() {
-  const phoneNumber = "584120000000"; // Número configurable
-  const defaultText = encodeURIComponent("Hola, me comunico desde el portal web del Centro de Especialidades Digestivas. Deseo información sobre consultas.");
+  const phoneNumber = "584127542400"; // Número oficial de atención
+  const defaultText = encodeURIComponent("Hola, me comunico desde el portal web del Centro de Endoscopias y Especialidades Digestivas. Deseo información sobre consultas y procedimientos.");
   const url = `https://wa.me/${phoneNumber}?text=${defaultText}`;
 
   return (

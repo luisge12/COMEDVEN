@@ -33,7 +33,7 @@ export default function AppointmentForm() {
       `*Modalidad de Pago:* ${formData.metodoPago}\n` +
       `*Motivo:* ${formData.motivo || 'Consulta preventiva'}`;
 
-    const urlWhatsApp = `https://wa.me/584120000000?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsApp = `https://wa.me/584127542400?text=${encodeURIComponent(mensaje)}`;
     
     setEnviado(true);
     window.open(urlWhatsApp, '_blank');
