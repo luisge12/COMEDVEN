@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { articulosData } from '@/data/articulos';
 
 export const metadata: Metadata = {
-  title: 'Blog Médico & Salud Digestiva | Estrategia SEO',
+  title: 'Blog Médico & Salud Digestiva | Centro de Endoscopias y Especialidades Digestivas',
   description: 'Artículos de educación médica, síntomas de alarma, prevención del cáncer digestivo y nutrición clínica.',
 };
 
@@ -13,8 +13,8 @@ export default function BlogPage() {
       <div className="container">
         
         <div className="section-title-wrap">
-          <span className="section-tag">Estrategia SEO & Divulgación</span>
-          <h1 className="section-title">Blog Médico Especializado</h1>
+          <span className="section-tag">Divulgación & Prevención</span>
+          <h1 className="section-title">Blog Médico</h1>
           <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.1rem' }}>
             Respuestas basadas en evidencia científica para tus dudas más comunes sobre el sistema digestivo.
           </p>

@@ -14,7 +14,7 @@ export default function Navbar() {
     { href: '/equipo-medico', label: 'Equipo Médico' },
     { href: '/servicios', label: 'Servicios' },
     { href: '/directorio', label: 'Directorio Médico' },
-    { href: '/blog', label: 'Blog & SEO' },
+    { href: '/blog', label: 'Blog' },
     { href: '/contacto', label: 'Contacto' },
   ];
 
