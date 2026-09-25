@@ -46,22 +46,47 @@ export default function EquipoMedicoPage() {
                 justifyContent: 'center',
                 textAlign: 'center'
               }}>
-                <div style={{
-                  width: '90px',
-                  height: '90px',
-                  borderRadius: 'var(--radius-full)',
-                  backgroundColor: 'var(--color-primary)',
-                  color: '#ffffff',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '2rem',
-                  fontWeight: 800,
-                  marginBottom: '1rem',
-                  boxShadow: 'var(--shadow-md)'
-                }}>
-                  {medico.iniciales}
-                </div>
+                {medico.imagen ? (
+                  <div style={{
+                    width: '130px',
+                    height: '130px',
+                    borderRadius: 'var(--radius-full)',
+                    overflow: 'hidden',
+                    marginBottom: '1rem',
+                    boxShadow: 'var(--shadow-md)',
+                    border: '3px solid #ffffff',
+                    backgroundColor: '#ffffff'
+                  }}>
+                    <img
+                      src={medico.imagen}
+                      alt={medico.nombre}
+                      style={{
+                        width: '100%',
+                        height: '100%',
+                        objectFit: 'cover',
+                        objectPosition: 'top center'
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div style={{
+                    width: '130px',
+                    height: '130px',
+                    borderRadius: 'var(--radius-full)',
+                    backgroundColor: 'var(--color-primary)',
+                    color: '#ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '2.5rem',
+                    fontWeight: 800,
+                    marginBottom: '1rem',
+                    boxShadow: 'var(--shadow-md)',
+                    border: '3px solid #ffffff'
+                  }}>
+                    {medico.iniciales}
+                  </div>
+                )}
 
                 <span style={{
                   fontSize: '0.75rem',

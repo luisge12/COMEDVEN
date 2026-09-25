@@ -5,6 +5,7 @@ export interface Medico {
   especialidad: string;
   sociedades?: string;
   iniciales: string;
+  imagen?: string;
   formacion: string[];
   dias: string;
   horario: string;
@@ -18,6 +19,7 @@ export const medicosData: Medico[] = [
     especialidad: "Coloproctología & Cirugía General",
     sociedades: "MSVC, MSVCP, ISUCRS",
     iniciales: "AT",
+    imagen: "/DR_AdrianTeran.jpg",
     formacion: [
       "Médico Cirujano – Universidad Rómulo Gallegos – Venezuela",
       "Cirujano General – Universidad Central de Venezuela – Venezuela",
@@ -33,6 +35,7 @@ export const medicosData: Medico[] = [
     categoriaTitulo: "NUESTRAS GASTROENTERÓLOGOS",
     especialidad: "Gastroenterología & Medicina Interna",
     iniciales: "PT",
+    imagen: "/DRA_PauletteTeran.jpg",
     formacion: [
       "Médico Cirujano – Universidad Rómulo Gallegos – Venezuela",
       "Medicina Interna – Universidad Central de Venezuela, Hospital Miguel Pérez Carreño",
@@ -48,6 +51,7 @@ export const medicosData: Medico[] = [
     especialidad: "Gastroenterología Pediátrica & Puericultura",
     sociedades: "SVPP, SVG, SOVED, LASPGHAN",
     iniciales: "MG",
+    imagen: "/DRA_MariaEugeniaGuerrero.jpg",
     formacion: [
       "Médico Cirujano – Universidad de Carabobo – Venezuela",
       "Pediatra y Puericultor – Universidad Central de Venezuela, Hospital de Niños JM de los Ríos",
