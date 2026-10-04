@@ -2,8 +2,8 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer style={{ backgroundColor: 'var(--color-primary-dark)', color: '#e2e8f0', padding: '4.5rem 0 2rem 0', marginTop: 'auto' }}>
-      <div className="container grid-2" style={{ gap: '4rem' }}>
+    <footer suppressHydrationWarning style={{ backgroundColor: 'var(--color-primary-dark)', color: '#e2e8f0', padding: '4.5rem 0 2rem 0', marginTop: 'auto' }}>
+      <div className="container grid-2" suppressHydrationWarning style={{ gap: '4rem' }}>
         
         <div>
           <h3 style={{ color: '#ffffff', fontSize: '1.25rem', marginBottom: '1.25rem', fontFamily: 'var(--font-family-heading)' }}>
@@ -39,9 +39,16 @@ export default function Footer() {
 
       </div>
 
-      <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.12)', marginTop: '3.5rem', paddingTop: '1.5rem', textAlign: 'center', fontSize: '0.85rem', color: '#94a3b8' }}>
-        <div className="container">
-          © <span suppressHydrationWarning>{currentYear}</span> Centro de Endoscopias y Especialidades Digestivas. Todos los derechos reservados.
+      <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.12)', marginTop: '3.5rem', paddingTop: '1.5rem', fontSize: '0.85rem', color: '#94a3b8' }}>
+        <div className="container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
+          <div>
+            © <span suppressHydrationWarning>{currentYear}</span> Centro de Endoscopias y Especialidades Digestivas. Todos los derechos reservados.
+          </div>
+          <div>
+            <a href="/admin/citas" style={{ color: '#64748b', fontSize: '0.75rem', textDecoration: 'none', opacity: 0.85 }}>
+              🔐 Panel de Citas
+            </a>
+          </div>
         </div>
       </div>
     </footer>

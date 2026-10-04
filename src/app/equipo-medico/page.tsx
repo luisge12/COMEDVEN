@@ -88,30 +88,22 @@ export default function EquipoMedicoPage() {
                   </div>
                 )}
 
-                <span style={{
-                  fontSize: '0.75rem',
-                  fontWeight: 800,
-                  letterSpacing: '0.05em',
-                  color: 'var(--color-accent)',
-                  textTransform: 'uppercase',
-                  marginBottom: '0.4rem'
-                }}>
-                  {medico.categoriaTitulo}
-                </span>
-
                 {medico.sociedades && (
-                  <span style={{
-                    fontSize: '0.8rem',
-                    fontWeight: 700,
+                  <div style={{
+                    fontSize: '0.75rem',
                     color: 'var(--color-primary-dark)',
                     backgroundColor: '#ffffff',
-                    padding: '0.3rem 0.75rem',
+                    padding: '0.4rem 0.75rem',
                     borderRadius: 'var(--radius-sm)',
                     border: '1px solid var(--color-border)',
-                    marginTop: '0.5rem'
+                    marginTop: '0.75rem',
+                    lineHeight: '1.4'
                   }}>
+                    <strong style={{ display: 'block', fontSize: '0.65rem', textTransform: 'uppercase', color: 'var(--color-accent)', letterSpacing: '0.05em', marginBottom: '0.15rem' }}>
+                      Sociedades Científicas:
+                    </strong>
                     {medico.sociedades}
-                  </span>
+                  </div>
                 )}
               </div>
 

@@ -8,8 +8,8 @@ export const metadata: Metadata = {
 
 export default function CitasPage() {
   return (
-    <div className="section" style={{ backgroundColor: 'var(--color-bg-body)' }}>
-      <div className="container" style={{ maxWidth: '900px' }}>
+    <div className="section" suppressHydrationWarning style={{ backgroundColor: 'var(--color-bg-body)' }}>
+      <div className="container" suppressHydrationWarning style={{ maxWidth: '900px' }}>
         
         <div className="section-title-wrap">
           <span className="section-tag">Agendamiento en Línea</span>

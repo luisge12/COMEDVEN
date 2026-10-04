@@ -3,6 +3,7 @@ import DualViewCard from '@/components/DualViewCard';
 import { enfermedadesData } from '@/data/enfermedades';
 import { medicosData } from '@/data/medicos';
 import { articulosData } from '@/data/articulos';
+import SponsorBanners from '@/components/SponsorBanners';
 
 export default function Home() {
   return (
@@ -300,14 +301,14 @@ export default function Home() {
                       </div>
                     </div>
                   )}
-                  <span style={{ fontSize: '0.7rem', fontWeight: 800, color: 'var(--color-accent)', textTransform: 'uppercase', display: 'block', marginBottom: '0.25rem' }}>
-                    {m.categoriaTitulo}
+                  <span style={{ fontSize: '0.72rem', fontWeight: 700, color: 'var(--color-accent)', textTransform: 'uppercase', display: 'block', marginBottom: '0.35rem', letterSpacing: '0.04em' }}>
+                    {m.especialidad}
                   </span>
-                  <h3 style={{ color: 'var(--color-primary-dark)', fontSize: '1.1rem', marginBottom: '0.35rem', lineHeight: '1.3' }}>
+                  <h3 style={{ color: 'var(--color-primary-dark)', fontSize: '1.15rem', marginBottom: '0.45rem', lineHeight: '1.3', fontFamily: 'var(--font-family-heading)' }}>
                     {m.nombre}
                   </h3>
-                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.825rem', marginBottom: '1rem', lineHeight: '1.4' }}>
-                    {m.especialidad}
+                  <p style={{ color: 'var(--color-text-muted)', fontSize: '0.8rem', marginBottom: '1rem', lineHeight: '1.4' }}>
+                    {m.dias} &bull; {m.horario}
                   </p>
                 </div>
                 <div>
@@ -481,6 +482,21 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Módulo 5: Alianzas Comerciales & Marcas Patrocinantes */}
+      <section className="section" style={{ backgroundColor: '#ffffff', borderTop: '1px solid var(--color-border)' }}>
+        <div className="container">
+          <div className="section-title-wrap" style={{ marginBottom: '2.5rem' }}>
+            <span className="section-tag">Alianzas Estratégicas</span>
+            <h2 className="section-title">Marcas Comerciales & Patrocinantes</h2>
+            <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
+              Espacio exclusivo para marcas de la industria farmacéutica, suplementación clínica y tecnología médica aliada.
+            </p>
+          </div>
+
+          <SponsorBanners />
         </div>
       </section>
     </>

@@ -18,9 +18,24 @@ export default function AppointmentForm() {
   });
 
   const [enviado, setEnviado] = useState(false);
+  const [guardando, setGuardando] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setGuardando(true);
+
+    try {
+      // Guardar registro en la base de datos interna
+      await fetch('/api/citas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+    } catch (err) {
+      console.error('Error guardando cita:', err);
+    } finally {
+      setGuardando(false);
+    }
 
     const mensaje = `Hola, deseo confirmar mi solicitud de cita médica en el *Centro de Especialidades Digestivas*:\n\n` +
       `*Paciente:* ${formData.nombre}\n` +
@@ -40,7 +55,7 @@ export default function AppointmentForm() {
   };
 
   return (
-    <div className="card" style={{ padding: '2.5rem', boxShadow: 'var(--shadow-lg)' }}>
+    <div className="card" suppressHydrationWarning style={{ padding: '2.5rem', boxShadow: 'var(--shadow-lg)' }}>
       {enviado ? (
         <div style={{ textAlign: 'center', padding: '2rem 1rem' }}>
           <h3 style={{ color: 'var(--color-primary)', marginTop: '1rem', marginBottom: '0.5rem' }}>
@@ -57,7 +72,7 @@ export default function AppointmentForm() {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} suppressHydrationWarning>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
             
             {/* Especialista o Servicio */}
@@ -176,10 +191,33 @@ export default function AppointmentForm() {
               </div>
             </div>
 
-            {/* Pasarela y Modalidad de Pago */}
+            {/* Motivo de la Consulta */}
+            <div>
+              <label style={{ display: 'block', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.4rem', color: 'var(--color-primary-dark)' }}>
+                Motivo de la Consulta o Síntomas:
+              </label>
+              <textarea
+                rows={3}
+                placeholder="Describe brevemente tus síntomas o motivo de consulta (ej. ardor estomacal, control rutinario, sospecha de colon irritable, indicación de endoscopia)..."
+                value={formData.motivo}
+                onChange={(e) => setFormData({ ...formData, motivo: e.target.value })}
+                style={{
+                  width: '100%',
+                  padding: '0.75rem',
+                  border: '1px solid var(--color-border)',
+                  borderRadius: 'var(--radius-sm)',
+                  backgroundColor: '#fff',
+                  resize: 'vertical',
+                  fontSize: '0.9rem',
+                  fontFamily: 'inherit'
+                }}
+              />
+            </div>
+
+            {/* Modalidad de Pago */}
             <div style={{ backgroundColor: 'var(--color-primary-light)', padding: '1.25rem', borderRadius: 'var(--radius-sm)', border: '1px solid #cbd5e1' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
-                <h4 style={{ color: 'var(--color-primary-dark)', fontSize: '0.95rem' }}>Modalidad de Pago & Pasarela</h4>
+                <h4 style={{ color: 'var(--color-primary-dark)', fontSize: '0.95rem' }}>Modalidad de Pago</h4>
               </div>
               <p style={{ fontSize: '0.825rem', color: 'var(--color-text-muted)', marginBottom: '0.75rem' }}>
                 Selecciona la vía con la que deseas abonar o completar el pago de tu consulta:
@@ -202,10 +240,18 @@ export default function AppointmentForm() {
 
             <button
               type="submit"
+              disabled={guardando}
               className="btn btn-accent"
-              style={{ width: '100%', padding: '1rem', fontSize: '1.1rem', marginTop: '0.5rem' }}
+              style={{
+                width: '100%',
+                padding: '1rem',
+                fontSize: '1.1rem',
+                marginTop: '0.5rem',
+                opacity: guardando ? 0.75 : 1,
+                cursor: guardando ? 'not-allowed' : 'pointer'
+              }}
             >
-              Confirmar y Enviar Solicitud de Cita
+              {guardando ? 'Guardando y conectando con WhatsApp...' : 'Confirmar y Enviar Solicitud de Cita'}
             </button>
 
           </div>
