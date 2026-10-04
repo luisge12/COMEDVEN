@@ -4,6 +4,7 @@ import DualViewCard from '@/components/DualViewCard';
 import { enfermedadesData } from '@/data/enfermedades';
 import { medicosData } from '@/data/medicos';
 import { articulosData } from '@/data/articulos';
+import SponsorBanners from '@/components/SponsorBanners';
 
 export default function Home() {
   return (
@@ -469,6 +470,21 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Módulo 5: Alianzas Comerciales & Marcas Patrocinantes */}
+      <section className="section" style={{ backgroundColor: '#ffffff', borderTop: '1px solid var(--color-border)' }}>
+        <div className="container">
+          <div className="section-title-wrap reveal-up" style={{ marginBottom: '2.5rem' }}>
+            <span className="section-tag">Alianzas Estratégicas</span>
+            <h2 className="section-title">Marcas Comerciales & Patrocinantes</h2>
+            <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
+              Espacio exclusivo para marcas de la industria farmacéutica, suplementación clínica y tecnología médica aliada.
+            </p>
+          </div>
+
+          <SponsorBanners />
         </div>
       </section>
     </>
