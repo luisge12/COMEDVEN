@@ -7,7 +7,7 @@ export default function ScrollRevealObserver() {
   const pathname = usePathname();
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // 1. Barra de progreso superior
+  // 1. Barra de progreso superior interactiva
   useEffect(() => {
     const handleScroll = () => {
       const totalScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -22,49 +22,83 @@ export default function ScrollRevealObserver() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // 2. Observador de intersección para animaciones de scroll
+  // 2. Motor de Scroll Reveal para cada componente de la web
   useEffect(() => {
-    // Si el usuario prefiere reducir movimiento, revelamos todo de inmediato
-    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+    // Configuración del observador de intersección
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('revealed');
-            // Dejar de observar una vez revelado para máxima fluidez y performance
+            // Dejar de observar una vez revelado
             observer.unobserve(entry.target);
           }
         });
       },
       {
         root: null,
-        rootMargin: '0px 0px -50px 0px', // Se activa un poco antes de que toque el fondo de la pantalla
-        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px', // Se activa en cuanto el componente asoma en la pantalla
+        threshold: 0.08,
       }
     );
 
-    const observeElements = () => {
-      const elements = document.querySelectorAll(
+    const scanAndObserve = () => {
+      // 1. Elementos con clases explícitas de reveal
+      const explicitElements = document.querySelectorAll(
         '.reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal'
       );
 
-      elements.forEach((el) => {
-        if (prefersReducedMotion) {
-          el.classList.add('revealed');
-        } else if (!el.classList.contains('revealed')) {
+      // 2. Además aplicamos automáticamente a componentes clave (tarjetas, títulos de sección, etc.)
+      const autoElements = document.querySelectorAll(
+        'main .card, main .section-title-wrap, main article, main .dual-view-card'
+      );
+
+      explicitElements.forEach((el) => {
+        if (!el.classList.contains('revealed')) {
           observer.observe(el);
+        }
+      });
+
+      autoElements.forEach((el, index) => {
+        // Si no tiene clase de animación explícita, le asignamos reveal-up
+        if (
+          !el.classList.contains('reveal-up') &&
+          !el.classList.contains('reveal-left') &&
+          !el.classList.contains('reveal-right') &&
+          !el.classList.contains('reveal-scale') &&
+          !el.classList.contains('reveal')
+        ) {
+          el.classList.add('reveal-up');
+          // Escalonamiento automático para elementos en cuadrícula
+          const delayClass = `delay-${((index % 4) + 1) * 100}`;
+          el.classList.add(delayClass);
+        }
+
+        if (!el.classList.contains('revealed')) {
+          observer.observe(el);
+        }
+      });
+
+      // Si algún elemento ya está dentro de la pantalla visible inicial al cargar, revelarlo suavemente
+      const allElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-scale, .reveal');
+      allElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85 && rect.bottom > 0) {
+          setTimeout(() => {
+            el.classList.add('revealed');
+          }, 60);
         }
       });
     };
 
-    // Observar elementos iniciales y tras un leve delay para hidratación de componentes
-    observeElements();
-    const timeoutId = setTimeout(observeElements, 100);
+    // Ejecutar escaneo inicial
+    scanAndObserve();
+    const timer1 = setTimeout(scanAndObserve, 80);
+    const timer2 = setTimeout(scanAndObserve, 350);
 
-    // Observar si se añaden nuevos elementos al DOM
+    // Escuchar mutaciones de DOM en navegaciones
     const mutationObserver = new MutationObserver(() => {
-      observeElements();
+      scanAndObserve();
     });
 
     mutationObserver.observe(document.body, {
@@ -73,38 +107,36 @@ export default function ScrollRevealObserver() {
     });
 
     return () => {
-      clearTimeout(timeoutId);
+      clearTimeout(timer1);
+      clearTimeout(timer2);
       observer.disconnect();
       mutationObserver.disconnect();
     };
   }, [pathname]);
 
   return (
-    <>
-      {/* Barra de progreso de lectura ultra-fina en el tope */}
+    <div
+      aria-hidden="true"
+      style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        height: '3px',
+        zIndex: 99999,
+        pointerEvents: 'none',
+        backgroundColor: 'transparent',
+      }}
+    >
       <div
-        aria-hidden="true"
         style={{
-          position: 'fixed',
-          top: 0,
-          left: 0,
-          right: 0,
-          height: '3px',
-          zIndex: 9999,
-          pointerEvents: 'none',
-          backgroundColor: 'transparent',
+          height: '100%',
+          width: `${scrollProgress}%`,
+          background: 'linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%)',
+          boxShadow: '0 0 12px rgba(0, 168, 150, 0.8)',
+          transition: 'width 0.1s ease-out',
         }}
-      >
-        <div
-          style={{
-            height: '100%',
-            width: `${scrollProgress}%`,
-            background: 'linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%)',
-            boxShadow: '0 0 10px rgba(0, 168, 150, 0.7)',
-            transition: 'width 0.12s ease-out',
-          }}
-        />
-      </div>
-    </>
+      />
+    </div>
   );
 }

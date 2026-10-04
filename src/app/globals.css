@@ -306,39 +306,44 @@ html {
 /* Transición Reveal Deslizamiento hacia Arriba */
 .reveal-up {
   opacity: 0;
-  transform: translateY(34px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateY(45px);
+  filter: blur(5px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 /* Transición Reveal Deslizamiento desde la Izquierda */
 .reveal-left {
   opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateX(-50px);
+  filter: blur(5px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 /* Transición Reveal Deslizamiento desde la Derecha */
 .reveal-right {
   opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: translateX(50px);
+  filter: blur(5px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 /* Transición Reveal con Escala y Fade */
 .reveal-scale {
   opacity: 0;
-  transform: scale(0.92) translateY(24px);
-  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
+  transform: scale(0.9) translateY(35px);
+  filter: blur(5px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform, filter;
 }
 
 /* Estado Activo al entrar en pantalla */
 .revealed {
   opacity: 1 !important;
   transform: translate(0, 0) scale(1) !important;
+  filter: blur(0px) !important;
 }
 
 /* Delays escalonados para efecto cascada (stagger) */
