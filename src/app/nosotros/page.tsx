@@ -37,46 +37,6 @@ export default function NosotrosPage() {
           </div>
         </div>
 
-        {/* Sección de Actividades Académicas y Eventos */}
-        <div className="section-title-wrap reveal-up">
-          <span className="section-tag">Educación Médica Continua</span>
-          <h2 className="section-title">Actividades Académicas & Eventos</h2>
-          <p style={{ color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
-            Fomentamos la actualización constante del gremio médico y la educación comunitaria de nuestros pacientes.
-          </p>
-        </div>
-
-        <div className="grid-3" style={{ marginBottom: '4rem' }}>
-          <div className="card reveal-up delay-100">
-            <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
-              Simposio de Motilidad & Eje Microbiota
-            </h3>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-              Jornada anual de actualización enfocada en avances terapéuticos en SII, SIBO y nuevas clasificaciones de Roma.
-            </p>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Evento Académico Anual</span>
-          </div>
-
-          <div className="card reveal-up delay-200">
-            <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
-              Talleres de Nutrición Terapéutica
-            </h3>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-              Sesiones prácticas mensuales dirigidas por nutricionistas clínicas para la implementación de dietas FODMAPs.
-            </p>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Comunidad de Pacientes</span>
-          </div>
-
-          <div className="card reveal-up delay-300">
-            <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
-              Ateneo Clínico & Casos Complejos
-            </h3>
-            <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-              Discusión multidisciplinaria mensual de casos desafiantes en hepatología, oncología y enfermedad inflamatoria intestinal.
-            </p>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Sesión Médica Interna</span>
-          </div>
-        </div>
 
         {/* Compromiso con la Sociedad */}
         <div className="card reveal-up" style={{ backgroundColor: 'var(--color-primary-light)', padding: '2.5rem', textAlign: 'center' }}>
