@@ -35,14 +35,6 @@ export default function SponsorBanners({ showHeader = false }: Props) {
           position: 'relative'
         }}
       >
-        {/* Franja decorativa superior */}
-        <div
-          style={{
-            height: '5px',
-            background: 'linear-gradient(90deg, var(--color-primary) 0%, var(--color-accent) 50%, var(--color-secondary) 100%)'
-          }}
-        />
-
         <div style={{ padding: '3rem 2rem', textAlign: 'center', maxWidth: '850px', margin: '0 auto' }}>
           {/* Badge de Oportunidad */}
           <span
