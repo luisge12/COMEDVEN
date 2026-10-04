@@ -92,7 +92,7 @@ export default function ServiciosPage() {
       <div className="container">
         
         {/* Encabezado */}
-        <div className="section-title-wrap" style={{ maxWidth: '850px' }}>
+        <div className="section-title-wrap reveal-up" style={{ maxWidth: '850px' }}>
           <span className="section-tag">Cartera de Procedimientos</span>
           <h1 className="section-title">¿Qué Ofrecemos?</h1>
           <p style={{ color: 'var(--color-text-main)', marginTop: '1.25rem', fontSize: '1.15rem', lineHeight: '1.8' }}>
@@ -103,7 +103,7 @@ export default function ServiciosPage() {
         {/* Bloques de Servicios por Categoría */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem', marginBottom: '4.5rem' }}>
           {gruposServicios.map((grupo, gIdx) => (
-            <div key={gIdx}>
+            <div key={gIdx} className="reveal-up">
               <h2 style={{
                 fontSize: '1.35rem',
                 color: 'var(--color-primary-dark)',
@@ -119,7 +119,7 @@ export default function ServiciosPage() {
                 {grupo.items.map((item, iIdx) => (
                   <div
                     key={iIdx}
-                    className="card"
+                    className={`card reveal-scale delay-${((iIdx % 3) + 1) * 100}`}
                     style={{
                       display: 'flex',
                       flexDirection: 'column',
@@ -147,7 +147,7 @@ export default function ServiciosPage() {
         </div>
 
         {/* Sección Destacada: Alianza Policlínica La Arboleda */}
-        <div className="card" style={{
+        <div className="card reveal-up" style={{
           backgroundColor: '#ffffff',
           borderTop: '5px solid var(--color-accent)',
           padding: '2.5rem',

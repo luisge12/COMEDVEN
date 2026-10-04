@@ -13,7 +13,7 @@ export default function EquipoMedicoPage() {
       <div className="container">
         
         {/* Encabezado */}
-        <div className="section-title-wrap">
+        <div className="section-title-wrap reveal-up">
           <span className="section-tag">Cuerpo Facultativo</span>
           <h1 className="section-title">Nuestros Especialistas</h1>
           <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.1rem' }}>
@@ -23,10 +23,10 @@ export default function EquipoMedicoPage() {
 
         {/* Listado de Médicos */}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem' }}>
-          {medicosData.map(medico => (
+          {medicosData.map((medico, idx) => (
             <div
               key={medico.id}
-              className="card"
+              className={`card reveal-up delay-${((idx % 3) + 1) * 100}`}
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))',

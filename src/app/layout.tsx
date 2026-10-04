@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import ScrollRevealObserver from '@/components/ScrollRevealObserver';
 
 export const metadata: Metadata = {
   title: 'Centro de Especialidades Digestivas | Gastroenterología & Endoscopia',
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <ScrollRevealObserver />
         <Navbar />
         <main>{children}</main>
         <Footer />

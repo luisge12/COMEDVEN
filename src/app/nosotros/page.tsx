@@ -12,7 +12,7 @@ export default function NosotrosPage() {
       <div className="container">
         
         {/* Encabezado: ¿Quiénes Somos? */}
-        <div className="section-title-wrap" style={{ maxWidth: '850px' }}>
+        <div className="section-title-wrap reveal-up" style={{ maxWidth: '850px' }}>
           <span className="section-tag">Institucional</span>
           <h1 className="section-title">¿Quiénes Somos?</h1>
           <p style={{ color: 'var(--color-text-main)', marginTop: '1.25rem', fontSize: '1.15rem', lineHeight: '1.8' }}>
@@ -20,16 +20,16 @@ export default function NosotrosPage() {
           </p>
         </div>
 
-        {/* Misión y Visión */}
+        {/* Misión y Visión con Reveal */}
         <div className="grid-2" style={{ marginBottom: '4.5rem', gap: '2rem' }}>
-          <div className="card" style={{ borderLeft: '4px solid var(--color-primary)' }}>
+          <div className="card reveal-left delay-100" style={{ borderLeft: '4px solid var(--color-primary)' }}>
             <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Misión</h2>
             <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
               Proporcionar atención médica integral especializada para las enfermedades de las vías digestivas, con tecnología de vanguardia y un equipo humano altamente calificado y capacitado. Centramos nuestros esfuerzos en un diagnóstico preciso y tratamientos efectivos, guiados por principios éticos y un trato humano, para restaurar tu salud, bienestar y calidad de vida.
             </p>
           </div>
 
-          <div className="card" style={{ borderLeft: '4px solid var(--color-accent)' }}>
+          <div className="card reveal-right delay-200" style={{ borderLeft: '4px solid var(--color-accent)' }}>
             <h2 style={{ color: 'var(--color-primary)', fontSize: '1.4rem', marginBottom: '0.75rem' }}>Visión</h2>
             <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.75' }}>
               Ser el principal centro de referencia en Coloproctología del país, ofreciendo diagnósticos tempranos y tratamientos de vanguardia adaptados a las necesidades particulares de cada paciente. Nuestro compromiso es proporcionarte una medicina de excelencia y altamente calificada, centrada en tu dignidad y calidad de vida, con un acceso equitativo y un firme compromiso social.
@@ -37,8 +37,8 @@ export default function NosotrosPage() {
           </div>
         </div>
 
-        {/* Sección de Actividades Académicas y Eventos (Punto 1 de la cotización) */}
-        <div className="section-title-wrap">
+        {/* Sección de Actividades Académicas y Eventos */}
+        <div className="section-title-wrap reveal-up">
           <span className="section-tag">Educación Médica Continua</span>
           <h2 className="section-title">Actividades Académicas & Eventos</h2>
           <p style={{ color: 'var(--color-text-muted)', marginTop: '0.5rem' }}>
@@ -47,7 +47,7 @@ export default function NosotrosPage() {
         </div>
 
         <div className="grid-3" style={{ marginBottom: '4rem' }}>
-          <div className="card">
+          <div className="card reveal-up delay-100">
             <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
               Simposio de Motilidad & Eje Microbiota
             </h3>
@@ -57,34 +57,37 @@ export default function NosotrosPage() {
             <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Evento Académico Anual</span>
           </div>
 
-          <div className="card">
+          <div className="card reveal-up delay-200">
             <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
-              Talleres Prácticos de Endoscopia
+              Talleres de Nutrición Terapéutica
             </h3>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-              Entrenamiento en técnicas de polipectomía avanzada, cromoscopia virtual e inyección hemostática para médicos residentes.
+              Sesiones prácticas mensuales dirigidas por nutricionistas clínicas para la implementación de dietas FODMAPs.
             </p>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Capacitación Hospitalaria</span>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Comunidad de Pacientes</span>
           </div>
 
-          <div className="card">
+          <div className="card reveal-up delay-300">
             <h3 style={{ color: 'var(--color-primary)', margin: '0.75rem 0 0.5rem 0', fontSize: '1.2rem' }}>
-              Campañas de Detección Temprana
+              Ateneo Clínico & Casos Complejos
             </h3>
             <p style={{ color: 'var(--color-text-muted)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-              Charlas comunitarias abiertas sobre factores de riesgo, nutrición antiinflamatoria y el valor de la colonoscopia oportuna.
+              Discusión multidisciplinaria mensual de casos desafiantes en hepatología, oncología y enfermedad inflamatoria intestinal.
             </p>
-            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Difusión Abierta al Público</span>
+            <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--color-accent)' }}>Sesión Médica Interna</span>
           </div>
         </div>
 
-        <div style={{ textAlign: 'center', backgroundColor: 'var(--color-primary-light)', padding: '3rem', borderRadius: 'var(--radius-lg)' }}>
-          <h3 style={{ color: 'var(--color-primary)', marginBottom: '0.75rem' }}>¿Deseas participar o consultar con nuestro equipo?</h3>
-          <p style={{ color: 'var(--color-text-muted)', maxWidth: '600px', margin: '0 auto 1.5rem auto' }}>
-            Nuestros especialistas están a tu disposición tanto para atención clínica como para colaboraciones científicas.
+        {/* Compromiso con la Sociedad */}
+        <div className="card reveal-up" style={{ backgroundColor: 'var(--color-primary-light)', padding: '2.5rem', textAlign: 'center' }}>
+          <h2 style={{ color: 'var(--color-primary-dark)', fontSize: '1.5rem', marginBottom: '1rem' }}>
+            Compromiso con la Salud de Nuestra Comunidad
+          </h2>
+          <p style={{ color: 'var(--color-text-main)', maxWidth: '750px', margin: '0 auto 1.75rem auto', lineHeight: '1.7' }}>
+            En el Centro de Especialidades Digestivas creemos que la medicina de excelencia debe estar acompañada de empatía, transparencia y acompañamiento continuo.
           </p>
-          <Link href="/citas" className="btn btn-primary">
-            Contactar con el Centro
+          <Link href="/citas" className="btn btn-primary" style={{ padding: '0.85rem 2rem' }}>
+            Contáctanos o Solicita una Cita
           </Link>
         </div>
 

@@ -7,7 +7,7 @@ import { articulosData } from '@/data/articulos';
 export default function Home() {
   return (
     <>
-      {/* Hero Section Simplificado & Directo */}
+      {/* Hero Section Simplificado & Directo con Transiciones Reveal */}
       <section style={{
         position: 'relative',
         background: 'radial-gradient(120% 120% at 50% -10%, #e0f2fe 0%, #f0fdf9 40%, #ffffff 100%)',
@@ -28,7 +28,7 @@ export default function Home() {
         }} />
 
         <div className="container grid-2" style={{ alignItems: 'center', gap: '3.5rem', position: 'relative', zIndex: 1 }}>
-          <div>
+          <div className="reveal-left">
             <div style={{
               display: 'inline-flex',
               alignItems: 'center',
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
 
           {/* Columna Derecha: Fotografía HERO Limpia */}
-          <div style={{ position: 'relative' }}>
+          <div className="reveal-right" style={{ position: 'relative' }}>
             <div style={{
               borderRadius: 'var(--radius-lg)',
               overflow: 'hidden',
@@ -115,8 +115,8 @@ export default function Home() {
               />
             </div>
 
-            {/* Badge Flotante Sede y Respaldo Institucional */}
-            <div className="floating-badge" style={{
+            {/* Badge Flotante Sede y Respaldo Institucional con animación sutil */}
+            <div className="floating-badge ambient-float" style={{
               position: 'absolute',
               bottom: '-20px',
               left: '20px',
@@ -150,7 +150,7 @@ export default function Home() {
       {/* Módulo 1: Servicios Médicos Destacados con Iconos */}
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap reveal-up">
             <span className="section-tag">Cartera de Procedimientos</span>
             <h2 className="section-title">Servicios Clínicos Especializados</h2>
             <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
 
           <div className="grid-3">
-            <div className="card">
+            <div className="card reveal-up delay-100">
               <div className="icon-box">
                 🔬
               </div>
@@ -177,7 +177,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="card">
+            <div className="card reveal-up delay-200">
               <div className="icon-box">
                 🩺
               </div>
@@ -195,7 +195,7 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="card">
+            <div className="card reveal-up delay-300">
               <div className="icon-box">
                 ⚡
               </div>
@@ -219,7 +219,7 @@ export default function Home() {
       {/* Módulo 2: Directorio de Enfermedades (Vista Dual Interactiva en Inicio) */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-body)' }}>
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap reveal-up">
             <span className="section-tag">Directorio Clínico Interactivo</span>
             <h2 className="section-title">Enfermedades con Vista Dual</h2>
             <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem' }}>
@@ -228,12 +228,14 @@ export default function Home() {
           </div>
 
           <div className="grid-2">
-            {enfermedadesData.slice(0, 2).map((enf) => (
-              <DualViewCard key={enf.id} enfermedad={enf} />
+            {enfermedadesData.slice(0, 2).map((enf, idx) => (
+              <div key={enf.id} className={`reveal-up delay-${(idx + 1) * 100}`}>
+                <DualViewCard enfermedad={enf} />
+              </div>
             ))}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <div className="reveal-up delay-300" style={{ textAlign: 'center', marginTop: '3rem' }}>
             <Link href="/directorio" className="btn btn-primary" style={{ padding: '0.85rem 2rem' }}>
               Ver Catálogo Completo de Patologías ({enfermedadesData.length})
             </Link>
@@ -241,17 +243,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Módulo 1: Conoce al Equipo Médico */}
+      {/* Módulo 3: Conoce al Equipo Médico */}
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap reveal-up">
             <span className="section-tag">Cuerpo Facultativo</span>
             <h2 className="section-title">Nuestros Especialistas</h2>
           </div>
 
           <div className="grid-4" style={{ gap: '1.5rem' }}>
-            {medicosData.map(m => (
-              <div key={m.id} className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '1.5rem' }}>
+            {medicosData.map((m, idx) => (
+              <div
+                key={m.id}
+                className={`card reveal-scale delay-${((idx % 4) + 1) * 100}`}
+                style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', padding: '1.5rem' }}
+              >
                 <div>
                   {m.imagen ? (
                     <div style={{
@@ -342,7 +348,7 @@ export default function Home() {
         }} />
 
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="section-title-wrap" style={{ marginBottom: '3.5rem' }}>
+          <div className="section-title-wrap reveal-up" style={{ marginBottom: '3.5rem' }}>
             <span style={{
               display: 'inline-block',
               fontSize: '0.8rem',
@@ -373,10 +379,10 @@ export default function Home() {
           </div>
 
           <div className="grid-4" style={{ gap: '1.75rem' }}>
-            <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+            <div className="reveal-up delay-100" style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.06)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: 'var(--radius-md)',
               padding: '2rem 1.5rem',
               transition: 'all 0.3s ease'
@@ -388,10 +394,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+            <div className="reveal-up delay-200" style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.06)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: 'var(--radius-md)',
               padding: '2rem 1.5rem',
               transition: 'all 0.3s ease'
@@ -403,10 +409,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+            <div className="reveal-up delay-300" style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.06)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: 'var(--radius-md)',
               padding: '2rem 1.5rem',
               transition: 'all 0.3s ease'
@@ -418,10 +424,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.05)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255, 255, 255, 0.1)',
+            <div className="reveal-up delay-400" style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.06)',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
               borderRadius: 'var(--radius-md)',
               padding: '2rem 1.5rem',
               transition: 'all 0.3s ease'
@@ -434,7 +440,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '3.5rem' }}>
+          <div className="reveal-up delay-500" style={{ textAlign: 'center', marginTop: '3.5rem' }}>
             <Link href="/citas" className="btn btn-accent" style={{ fontSize: '1.05rem', padding: '0.9rem 2.5rem', boxShadow: '0 8px 24px rgba(0, 168, 150, 0.4)' }}>
               Solicitar Presupuesto o Agendar Cita
             </Link>
@@ -445,7 +451,7 @@ export default function Home() {
       {/* Módulo 4: Blog Médico & Estrategia SEO */}
       <section className="section" style={{ backgroundColor: 'var(--color-bg-body)' }}>
         <div className="container">
-          <div className="section-title-wrap">
+          <div className="section-title-wrap reveal-up">
             <span className="section-tag">Blog de Salud & Prevención</span>
             <h2 className="section-title">Artículos Médicos Recientes</h2>
             <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
@@ -454,8 +460,12 @@ export default function Home() {
           </div>
 
           <div className="grid-3">
-            {articulosData.map(art => (
-              <article key={art.slug} className="card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            {articulosData.map((art, idx) => (
+              <article
+                key={art.slug}
+                className={`card reveal-up delay-${(idx + 1) * 100}`}
+                style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
+              >
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                     <span style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--color-accent)', textTransform: 'uppercase', backgroundColor: 'var(--color-primary-light)', padding: '0.2rem 0.65rem', borderRadius: 'var(--radius-full)' }}>
