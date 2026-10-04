@@ -20,15 +20,18 @@ export default function Navbar() {
   return (
     <>
       {/* Header Fijo */}
-      <header style={{
-        position: 'sticky',
-        top: 0,
-        zIndex: 100,
-        backgroundColor: 'rgba(255, 255, 255, 0.96)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid var(--color-border)',
-        boxShadow: 'var(--shadow-sm)'
-      }}>
+      <header
+        className="site-header"
+        style={{
+          position: 'sticky',
+          top: 0,
+          zIndex: 100,
+          backgroundColor: 'rgba(255, 255, 255, 0.96)',
+          backdropFilter: 'blur(10px)',
+          borderBottom: '1px solid var(--color-border)',
+          boxShadow: 'var(--shadow-sm)'
+        }}
+      >
         <div className="container navbar-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '75px' }}>
           
           {/* Logotipo */}

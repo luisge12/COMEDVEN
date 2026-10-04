@@ -471,17 +471,8 @@ html {
    ========================================================================= */
 
 @media (max-width: 1024px) {
-  /* Ocultar barra superior de contacto */
-  .top-bar-contact {
-    display: none !important;
-  }
-
-  /* Alternar visibilidad de navegación */
-  .mobile-nav-toggle {
-    display: flex !important;
-  }
-
-  .desktop-nav {
+  /* Ocultar header por completo en pantallas medianas y pequeñas */
+  .site-header, header {
     display: none !important;
   }
 
