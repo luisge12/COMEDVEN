@@ -379,14 +379,7 @@ export default function Home() {
           </div>
 
           <div className="grid-4" style={{ gap: '1.75rem' }}>
-            <div className="reveal-up delay-100" style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.06)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
-              borderRadius: 'var(--radius-md)',
-              padding: '2rem 1.5rem',
-              transition: 'all 0.3s ease'
-            }}>
+            <div className="dark-feature-card reveal-up delay-100">
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🛡️</div>
               <h4 style={{ color: '#ffffff', fontSize: '1.15rem', marginBottom: '0.6rem' }}>Máximo Confort</h4>
               <p style={{ color: '#cbd5e1', fontSize: '0.875rem', lineHeight: '1.6' }}>
@@ -394,14 +387,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="reveal-up delay-200" style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.06)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
-              borderRadius: 'var(--radius-md)',
-              padding: '2rem 1.5rem',
-              transition: 'all 0.3s ease'
-            }}>
+            <div className="dark-feature-card reveal-up delay-200">
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🔬</div>
               <h4 style={{ color: '#ffffff', fontSize: '1.15rem', marginBottom: '0.6rem' }}>Equipamiento Avanzado</h4>
               <p style={{ color: '#cbd5e1', fontSize: '0.875rem', lineHeight: '1.6' }}>
@@ -409,14 +395,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="reveal-up delay-300" style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.06)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
-              borderRadius: 'var(--radius-md)',
-              padding: '2rem 1.5rem',
-              transition: 'all 0.3s ease'
-            }}>
+            <div className="dark-feature-card reveal-up delay-300">
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>👥</div>
               <h4 style={{ color: '#ffffff', fontSize: '1.15rem', marginBottom: '0.6rem' }}>Enfoque Integral</h4>
               <p style={{ color: '#cbd5e1', fontSize: '0.875rem', lineHeight: '1.6' }}>
@@ -424,14 +403,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="reveal-up delay-400" style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.06)',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
-              borderRadius: 'var(--radius-md)',
-              padding: '2rem 1.5rem',
-              transition: 'all 0.3s ease'
-            }}>
+            <div className="dark-feature-card reveal-up delay-400">
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🏥</div>
               <h4 style={{ color: '#ffffff', fontSize: '1.15rem', marginBottom: '0.6rem' }}>Respaldo Clínico</h4>
               <p style={{ color: '#cbd5e1', fontSize: '0.875rem', lineHeight: '1.6' }}>
