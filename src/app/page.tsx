@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import DualViewCard from '@/components/DualViewCard';
 import { enfermedadesData } from '@/data/enfermedades';
 import { medicosData } from '@/data/medicos';
@@ -103,12 +104,14 @@ export default function Home() {
               aspectRatio: '4/3',
               position: 'relative'
             }}>
-              <img
+              <Image
                 src="/HERO.jpg"
                 alt="Centro de Especialidades Digestivas"
+                fill
+                priority
+                quality={92}
+                sizes="(max-width: 900px) 100vw, 600px"
                 style={{
-                  width: '100%',
-                  height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center'
                 }}
@@ -261,27 +264,30 @@ export default function Home() {
                 <div>
                   {m.imagen ? (
                     <div style={{
-                      height: '160px',
+                      position: 'relative',
+                      width: '100%',
+                      height: '240px',
                       borderRadius: 'var(--radius-sm)',
                       overflow: 'hidden',
                       marginBottom: '1rem',
                       backgroundColor: 'var(--color-primary-light)'
                     }}>
-                      <img
+                      <Image
                         src={m.imagen}
                         alt={m.nombre}
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
+                        quality={95}
                         style={{
-                          width: '100%',
-                          height: '100%',
                           objectFit: 'cover',
-                          objectPosition: 'top center'
+                          objectPosition: 'center 15%'
                         }}
                       />
                     </div>
                   ) : (
                     <div style={{
                       backgroundColor: 'var(--color-primary-light)',
-                      height: '160px',
+                      height: '240px',
                       borderRadius: 'var(--radius-sm)',
                       display: 'flex',
                       flexDirection: 'column',
@@ -290,15 +296,15 @@ export default function Home() {
                       marginBottom: '1rem'
                     }}>
                       <div style={{
-                        width: '60px',
-                        height: '60px',
+                        width: '70px',
+                        height: '70px',
                         borderRadius: 'var(--radius-full)',
                         backgroundColor: 'var(--color-primary)',
                         color: '#ffffff',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
-                        fontSize: '1.5rem',
+                        fontSize: '1.75rem',
                         fontWeight: 800,
                         boxShadow: 'var(--shadow-sm)'
                       }}>

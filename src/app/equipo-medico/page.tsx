@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { medicosData } from '@/data/medicos';
 
 export const metadata: Metadata = {
@@ -48,30 +49,32 @@ export default function EquipoMedicoPage() {
               }}>
                 {medico.imagen ? (
                   <div style={{
-                    width: '130px',
-                    height: '130px',
+                    position: 'relative',
+                    width: '150px',
+                    height: '150px',
                     borderRadius: 'var(--radius-full)',
                     overflow: 'hidden',
                     marginBottom: '1rem',
                     boxShadow: 'var(--shadow-md)',
-                    border: '3px solid #ffffff',
+                    border: '4px solid #ffffff',
                     backgroundColor: '#ffffff'
                   }}>
-                    <img
+                    <Image
                       src={medico.imagen}
                       alt={medico.nombre}
+                      fill
+                      sizes="300px"
+                      quality={95}
                       style={{
-                        width: '100%',
-                        height: '100%',
                         objectFit: 'cover',
-                        objectPosition: 'top center'
+                        objectPosition: 'center 15%'
                       }}
                     />
                   </div>
                 ) : (
                   <div style={{
-                    width: '130px',
-                    height: '130px',
+                    width: '150px',
+                    height: '150px',
                     borderRadius: 'var(--radius-full)',
                     backgroundColor: 'var(--color-primary)',
                     color: '#ffffff',
@@ -82,7 +85,7 @@ export default function EquipoMedicoPage() {
                     fontWeight: 800,
                     marginBottom: '1rem',
                     boxShadow: 'var(--shadow-md)',
-                    border: '3px solid #ffffff'
+                    border: '4px solid #ffffff'
                   }}>
                     {medico.iniciales}
                   </div>
