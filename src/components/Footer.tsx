@@ -40,15 +40,8 @@ export default function Footer() {
       </div>
 
       <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.12)', marginTop: '3.5rem', paddingTop: '1.5rem', fontSize: '0.85rem', color: '#94a3b8' }}>
-        <div className="container" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '0.5rem' }}>
-          <div>
-            © <span suppressHydrationWarning>{currentYear}</span> Centro de Endoscopias y Especialidades Digestivas. Todos los derechos reservados.
-          </div>
-          <div>
-            <a href="/admin/citas" style={{ color: '#64748b', fontSize: '0.75rem', textDecoration: 'none', opacity: 0.85 }}>
-              🔐 Panel de Citas
-            </a>
-          </div>
+        <div className="container" style={{ textAlign: 'center' }}>
+          © <span suppressHydrationWarning>{currentYear}</span> Centro de Endoscopias y Especialidades Digestivas. Todos los derechos reservados.
         </div>
       </div>
     </footer>

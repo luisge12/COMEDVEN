@@ -70,18 +70,7 @@ export default function AppointmentForm() {
       });
 
       if (!emailRes.ok) {
-        console.warn('Respuesta no óptima al enviar correo, continuando con guardado interno');
-      }
-
-      // 2. Guardar registro en la base de datos interna local (/api/citas)
-      try {
-        await fetch('/api/citas', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
-      } catch (errApi) {
-        console.warn('Aviso al guardar en API local:', errApi);
+        console.warn('Respuesta no óptima al enviar correo');
       }
 
       setEnviado(true);
