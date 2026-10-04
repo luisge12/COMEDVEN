@@ -3,8 +3,16 @@
 import { useState } from 'react';
 import { medicosData } from '@/data/medicos';
 
-const EMAIL_CLINICA_PRINCIPAL = 'comedven@gmail.com';
-const EMAIL_CLINICA_SECUNDARIO = 'info.comedven@gmail.com';
+// =========================================================================
+// ⚠️ ATENCIÓN / CONFIGURACIÓN DE CORREO DE RECEPCIÓN DE CITAS:
+// Actualmente configurado para pruebas hacia: luisge1299@gmail.com
+// 
+// 👉 PARA PRODUCCIÓN: Cambiar estos valores por los correos oficiales de la clínica:
+// const EMAIL_CLINICA_PRINCIPAL = 'comedven@gmail.com';
+// const EMAIL_CLINICA_SECUNDARIO = 'info.comedven@gmail.com';
+// =========================================================================
+const EMAIL_CLINICA_PRINCIPAL = 'luisge1299@gmail.com';
+const EMAIL_CLINICA_SECUNDARIO = ''; // Dejar vacío para pruebas, o 'info.comedven@gmail.com' para producción
 
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
@@ -31,28 +39,33 @@ export default function AppointmentForm() {
 
     try {
       // 1. Enviar el correo directamente a la clínica sin requerir cuentas
+      const emailPayload: Record<string, string> = {
+        _subject: `🏥 Nueva Solicitud de Cita: ${formData.nombre} - ${formData.servicio}`,
+        _template: 'table',
+        _captcha: 'false',
+        'Paciente': formData.nombre,
+        'Cédula / Documento': formData.cedula,
+        'Teléfono de Contacto': formData.telefono,
+        'Correo del Paciente': formData.email || 'No proporcionado',
+        'Especialista Solicitado': formData.medico || 'Cualquier especialista disponible',
+        'Servicio o Procedimiento': formData.servicio,
+        'Fecha Deseada': formData.fecha,
+        'Turno de Atención': formData.turno,
+        'Modalidad de Pago': formData.metodoPago,
+        'Motivo de Consulta / Síntomas': formData.motivo || 'Consulta preventiva / chequeo general'
+      };
+
+      if (EMAIL_CLINICA_SECUNDARIO) {
+        emailPayload._cc = EMAIL_CLINICA_SECUNDARIO;
+      }
+
       const emailRes = await fetch(`https://formsubmit.co/ajax/${EMAIL_CLINICA_PRINCIPAL}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
         },
-        body: JSON.stringify({
-          _subject: `🏥 Nueva Solicitud de Cita: ${formData.nombre} - ${formData.servicio}`,
-          _cc: EMAIL_CLINICA_SECUNDARIO,
-          _template: 'table',
-          _captcha: 'false',
-          'Paciente': formData.nombre,
-          'Cédula / Documento': formData.cedula,
-          'Teléfono de Contacto': formData.telefono,
-          'Correo del Paciente': formData.email || 'No proporcionado',
-          'Especialista Solicitado': formData.medico || 'Cualquier especialista disponible',
-          'Servicio o Procedimiento': formData.servicio,
-          'Fecha Deseada': formData.fecha,
-          'Turno de Atención': formData.turno,
-          'Modalidad de Pago': formData.metodoPago,
-          'Motivo de Consulta / Síntomas': formData.motivo || 'Consulta preventiva / chequeo general'
-        }),
+        body: JSON.stringify(emailPayload),
       });
 
       if (!emailRes.ok) {
