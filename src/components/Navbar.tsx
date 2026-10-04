@@ -35,7 +35,7 @@ export default function Navbar() {
         <div className="container navbar-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '75px' }}>
           
           {/* Logotipo */}
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, fontSize: '1.15rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)', textDecoration: 'none' }}>
+          <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, fontSize: '1.15rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)', textDecoration: 'none' }}>
             <span>Centro de Especialidades Digestivas</span>
           </Link>
 
