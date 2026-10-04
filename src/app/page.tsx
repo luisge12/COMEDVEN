@@ -473,14 +473,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Módulo 5: Alianzas Comerciales & Marcas Patrocinantes */}
+      {/* Módulo 5: Espacio Publicitario & Alianzas Comerciales */}
       <section className="section" style={{ backgroundColor: '#ffffff', borderTop: '1px solid var(--color-border)' }}>
         <div className="container">
           <div className="section-title-wrap reveal-up" style={{ marginBottom: '2.5rem' }}>
-            <span className="section-tag">Alianzas Estratégicas</span>
-            <h2 className="section-title">Marcas Comerciales & Patrocinantes</h2>
+            <span className="section-tag">Alianzas & Patrocinios</span>
+            <h2 className="section-title">Espacio Publicitario Disponible</h2>
             <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
-              Espacio exclusivo para marcas de la industria farmacéutica, suplementación clínica y tecnología médica aliada.
+              Plataforma de alta visibilidad para laboratorios, marcas de salud digestiva y tecnología médica.
             </p>
           </div>
 

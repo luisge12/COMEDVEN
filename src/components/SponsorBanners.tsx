@@ -24,6 +24,7 @@ export default function SponsorBanners({ showHeader = false }: Props) {
   if (activeBanners.length === 0) {
     return (
       <div
+        className="card reveal-up"
         style={{
           margin: '1.5rem 0 2.5rem 0',
           backgroundColor: '#ffffff',

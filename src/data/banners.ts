@@ -83,46 +83,10 @@ export const SPONSOR_CONTACT_INFO = {
 
 /**
  * LISTADO OFICIAL DE PATROCINADORES
- * Para agregar o retirar patrocinadores, modifica los elementos de esta lista.
+ * Para agregar patrocinadores cuando contraten pautas, agrégalos a esta lista.
+ * Al estar vacía, se muestra de forma automática el banner de "Espacio Publicitario Disponible".
  */
-export const sponsorBannersData: SponsorBanner[] = [
-  {
-    id: "patrocinante-1",
-    marca: "Laboratorios Farmacéuticos Alianza",
-    descripcion: "Líderes en formulaciones digestivas avanzadas y protectores de mucosa gástrica de última generación.",
-    enlace: "https://alianzafarmaceutica.ejemplo.com",
-    tagline: "Innovación farmacológica al servicio de la gastroenterología.",
-    badge: "Marca Comercial Patrocinante",
-    imagen: "/sponsor_laboratorio.jpg",
-    activo: true,
-    orden: 1,
-    notasAdmin: "Contrato activo anual"
-  },
-  {
-    id: "patrocinante-2",
-    marca: "Probióticos DigestCare Plus",
-    descripcion: "Cepas probióticas microencapsuladas de alta viabilidad clínica para la restauración del microbioma intestinal.",
-    enlace: "https://digestcareplus.ejemplo.com",
-    tagline: "Equilibrio digestivo y bienestar integral con evidencia científica.",
-    badge: "Suplemento Clínico Patrocinante",
-    imagen: "/sponsor_probioticos_vertical.jpg",
-    activo: true,
-    orden: 2,
-    notasAdmin: "Campaña semestral"
-  },
-  {
-    id: "patrocinante-3",
-    marca: "Tecnología Médica Olympus EndoTech",
-    descripcion: "Sistemas de videoendoscopia de ultra alta resolución (4K/NBI) equipando nuestras salas de procedimientos.",
-    enlace: "https://olympusendotech.ejemplo.com",
-    tagline: "Precisión óptica insuperable en diagnóstico y terapéutica endoscópica.",
-    badge: "Tecnología Médica Aliada",
-    imagen: "/sponsor_olympus.jpg",
-    activo: true,
-    orden: 3,
-    notasAdmin: "Convenio tecnológico institucional"
-  }
-];
+export const sponsorBannersData: SponsorBanner[] = [];
 
 /**
  * Obtiene únicamente los patrocinadores activos ordenados por prioridad
