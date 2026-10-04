@@ -50,9 +50,9 @@ export default function Home() {
 
             <h1 style={{
               fontFamily: 'var(--font-family-heading)',
-              fontSize: '3.1rem',
+              fontSize: 'clamp(1.75rem, 4.2vw, 3.1rem)',
               color: 'var(--color-primary-dark)',
-              lineHeight: 1.15,
+              lineHeight: 1.18,
               marginBottom: '1.25rem',
               letterSpacing: '-0.02em'
             }}>
@@ -61,8 +61,8 @@ export default function Home() {
 
             <p style={{
               color: 'var(--color-text-muted)',
-              fontSize: '1.2rem',
-              lineHeight: 1.7,
+              fontSize: 'clamp(0.95rem, 2vw, 1.2rem)',
+              lineHeight: 1.65,
               marginBottom: '2.5rem'
             }}>
               Unidad médica y quirúrgica especializada en el diagnóstico y tratamiento de las enfermedades del sistema digestivo, colon, recto y ano.

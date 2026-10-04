@@ -19,21 +19,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* Barra de Contacto Superior */}
-      <aside suppressHydrationWarning style={{ backgroundColor: 'var(--color-primary-dark)', color: '#ffffff', fontSize: '0.85rem', padding: '0.5rem 0' }}>
-        <div className="container" suppressHydrationWarning style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.5rem' }}>
-          <p suppressHydrationWarning style={{ margin: 0 }}>
-            Atención: 0412-7542400 / 0212-5550340 | Policlínica La Arboleda, Piso 2, Consultorio 211
-          </p>
-          <div suppressHydrationWarning style={{ display: 'flex', gap: '1.25rem' }}>
-            <span>Caracas, Distrito Capital</span>
-            <a href="https://instagram.com/tuendoscopia" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'underline', color: '#67e8f9' }}>
-              Instagram: @tuendoscopia
-            </a>
-          </div>
-        </div>
-      </aside>
-
       {/* Header Fijo */}
       <header style={{
         position: 'sticky',
@@ -44,15 +29,45 @@ export default function Navbar() {
         borderBottom: '1px solid var(--color-border)',
         boxShadow: 'var(--shadow-sm)'
       }}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '80px' }}>
+        <div className="container navbar-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '75px' }}>
           
           {/* Logotipo */}
-          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontWeight: 800, fontSize: '1.2rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)' }}>
+          <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, fontSize: '1.15rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)', textDecoration: 'none' }}>
             <span>Centro de Especialidades Digestivas</span>
           </Link>
 
+          {/* Botón Hamburguesa para Móviles y Tablets */}
+          <button
+            type="button"
+            className="mobile-nav-toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
+            style={{
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              padding: '0.5rem',
+              color: 'var(--color-primary-dark)',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            {isOpen ? (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            ) : (
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            )}
+          </button>
+
           {/* Navegación Desktop */}
-          <nav style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+          <nav className="desktop-nav" style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
             {navLinks.map((link) => {
               const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
               return (
@@ -61,7 +76,7 @@ export default function Navbar() {
                   href={link.href}
                   style={{
                     fontWeight: 600,
-                    fontSize: '0.95rem',
+                    fontSize: '0.9rem',
                     color: isActive ? 'var(--color-accent)' : 'var(--color-text-main)',
                     borderBottom: isActive ? '2px solid var(--color-accent)' : '2px solid transparent',
                     paddingBottom: '0.25rem',
@@ -73,11 +88,51 @@ export default function Navbar() {
               );
             })}
 
-            <Link href="/citas" className="btn btn-primary" style={{ padding: '0.6rem 1.25rem', fontSize: '0.9rem' }}>
+            <Link href="/citas" className="btn btn-primary" style={{ padding: '0.55rem 1.15rem', fontSize: '0.85rem' }}>
               Agendar Cita
             </Link>
           </nav>
         </div>
+
+        {/* Menú Desplegable Móvil */}
+        {isOpen && (
+          <div className="mobile-nav-menu" style={{
+            backgroundColor: '#ffffff',
+            borderTop: '1px solid var(--color-border)',
+            padding: '1.25rem 1.5rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem',
+            boxShadow: 'var(--shadow-md)'
+          }}>
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  style={{
+                    fontWeight: 600,
+                    fontSize: '0.95rem',
+                    color: isActive ? 'var(--color-accent)' : 'var(--color-text-main)',
+                    padding: '0.4rem 0'
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+            <Link
+              href="/citas"
+              onClick={() => setIsOpen(false)}
+              className="btn btn-primary"
+              style={{ width: '100%', marginTop: '0.5rem', padding: '0.65rem 1rem', fontSize: '0.9rem', textAlign: 'center' }}
+            >
+              Agendar Cita
+            </Link>
+          </div>
+        )}
       </header>
     </>
   );

@@ -455,3 +455,166 @@ html {
   z-index: 0;
 }
 
+/* =========================================================================
+   NAVEGACIÓN RESPONSIVE: ESCRITORIO
+   ========================================================================= */
+.mobile-nav-toggle {
+  display: none !important;
+}
+
+.desktop-nav {
+  display: flex !important;
+}
+
+/* =========================================================================
+   PANTALLAS MEDIANAS Y PEQUEÑAS (TABLETS, MÓVILES Y PANTALLAS COMPACTAS)
+   ========================================================================= */
+
+@media (max-width: 1024px) {
+  /* Ocultar barra superior de contacto */
+  .top-bar-contact {
+    display: none !important;
+  }
+
+  /* Alternar visibilidad de navegación */
+  .mobile-nav-toggle {
+    display: flex !important;
+  }
+
+  .desktop-nav {
+    display: none !important;
+  }
+
+  /* Reducción proporcional del tamaño de letra base en todo el sitio */
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    font-size: 0.95rem;
+  }
+
+  /* Títulos y encabezados más pequeños */
+  h1 {
+    font-size: 2.15rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2, .section-title {
+    font-size: 1.75rem !important;
+    line-height: 1.25 !important;
+  }
+
+  h3 {
+    font-size: 1.18rem !important;
+  }
+
+  h4 {
+    font-size: 1rem !important;
+  }
+
+  p {
+    font-size: 0.94rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .section-title-wrap {
+    margin-bottom: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ocultar barra superior de contacto */
+  .top-bar-contact {
+    display: none !important;
+  }
+
+  /* Letras aún más pequeñas y compactas en móviles */
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.85rem !important;
+    line-height: 1.2 !important;
+  }
+
+  h2, .section-title {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.08rem !important;
+  }
+
+  h4 {
+    font-size: 0.92rem !important;
+  }
+
+  p {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .section-title-wrap {
+    margin-bottom: 1.75rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12.5px;
+  }
+
+  h1 {
+    font-size: 1.6rem !important;
+  }
+
+  h2, .section-title {
+    font-size: 1.35rem !important;
+  }
+
+  h3 {
+    font-size: 1rem !important;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
