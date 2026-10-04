@@ -5,13 +5,14 @@ import { medicosData } from '@/data/medicos';
 
 // =========================================================================
 // ⚠️ ATENCIÓN / CONFIGURACIÓN DE CORREO DE RECEPCIÓN DE CITAS:
-// Actualmente configurado para pruebas hacia: luisge1299@gmail.com
+// Actualmente configurado y ACTIVADO para pruebas hacia: luisge1299@gmail.com
+// (Token seguro que protege tu correo de spam: 18e483345e4e9a12a5d61401cf026b5b)
 // 
-// 👉 PARA PRODUCCIÓN: Cambiar estos valores por los correos oficiales de la clínica:
+// 👉 PARA PRODUCCIÓN: Reemplazar por el correo oficial de la clínica:
 // const EMAIL_CLINICA_PRINCIPAL = 'comedven@gmail.com';
 // const EMAIL_CLINICA_SECUNDARIO = 'info.comedven@gmail.com';
 // =========================================================================
-const EMAIL_CLINICA_PRINCIPAL = 'luisge1299@gmail.com';
+const EMAIL_CLINICA_PRINCIPAL = '18e483345e4e9a12a5d61401cf026b5b'; // Vinculado a luisge1299@gmail.com
 const EMAIL_CLINICA_SECUNDARIO = ''; // Dejar vacío para pruebas, o 'info.comedven@gmail.com' para producción
 
 export default function AppointmentForm() {
