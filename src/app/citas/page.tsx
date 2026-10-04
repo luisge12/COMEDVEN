@@ -1,26 +1,26 @@
 import { Metadata } from 'next';
-import CitasContainer from '@/components/CitasContainer';
+import AppointmentForm from '@/components/AppointmentForm';
 
 export const metadata: Metadata = {
   title: 'Agendar Cita Médica & Pagos | Centro de Especialidades Digestivas',
-  description: 'Módulo interactivo de reserva de citas con gastroenterólogos, hepatólogos y estudios endoscópicos. Métodos de pago flexibles.',
+  description: 'Módulo de reserva de citas con gastroenterólogos, hepatólogos y estudios endoscópicos. Solicitud directa al correo de la clínica.',
 };
 
 export default function CitasPage() {
   return (
     <div className="section" suppressHydrationWarning style={{ backgroundColor: 'var(--color-bg-body)' }}>
-      <div className="container" suppressHydrationWarning style={{ maxWidth: '950px' }}>
+      <div className="container" suppressHydrationWarning style={{ maxWidth: '900px' }}>
         
         <div className="section-title-wrap">
           <span className="section-tag">Agendamiento en Línea</span>
           <h1 className="section-title">Reserva tu Cita Especializada</h1>
           <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
-            Selecciona el horario que mejor te convenga con confirmación inmediata en tu calendario, o contáctanos directamente para coordinar con recepción.
+            Completa tus datos en el formulario sin necesidad de crear ninguna cuenta. La información se enviará de inmediato al correo oficial de la clínica para coordinar tu cita.
           </p>
         </div>
 
-        {/* Agendamiento Inteligente (Cal.com + Formulario Asistido) */}
-        <CitasContainer />
+        {/* Formulario Directo */}
+        <AppointmentForm />
 
         {/* Información de Apoyo al Paciente */}
         <div className="grid-2" style={{ marginTop: '3.5rem', gap: '1.5rem' }}>
