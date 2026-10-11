@@ -9,8 +9,8 @@ import { medicosData } from '@/data/medicos';
 // (Token seguro que protege tu correo de spam: 18e483345e4e9a12a5d61401cf026b5b)
 // 
 // 👉 PARA PRODUCCIÓN: Reemplazar por el correo oficial de la clínica:
-// const EMAIL_CLINICA_PRINCIPAL = 'comedven@gmail.com';
-// const EMAIL_CLINICA_SECUNDARIO = 'info.comedven@gmail.com';
+// const EMAIL_CLINICA_PRINCIPAL = 'info.comedven@gmail.com';
+// const EMAIL_CLINICA_SECUNDARIO = 'comedven@gmail.com';
 // =========================================================================
 const EMAIL_CLINICA_PRINCIPAL = '18e483345e4e9a12a5d61401cf026b5b'; // Vinculado a luisge1299@gmail.com
 const EMAIL_CLINICA_SECUNDARIO = ''; // Dejar vacío para pruebas, o 'info.comedven@gmail.com' para producción
@@ -95,7 +95,7 @@ export default function AppointmentForm() {
       `*Modalidad de Pago:* ${formData.metodoPago}\n` +
       `*Motivo:* ${formData.motivo || 'Consulta preventiva'}`;
 
-    const urlWhatsApp = `https://wa.me/584127542400?text=${encodeURIComponent(mensaje)}`;
+    const urlWhatsApp = `https://wa.me/584123219381?text=${encodeURIComponent(mensaje)}`;
     window.open(urlWhatsApp, '_blank');
   };
 

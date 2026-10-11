@@ -73,11 +73,11 @@ export interface SponsorBanner {
  * Canales oficiales para recepción de propuestas comerciales y solicitudes de patrocinio
  */
 export const SPONSOR_CONTACT_INFO = {
-  telefono: "0412-7542400",
-  whatsappNumber: "584127542400",
+  telefono: "0412-3219381",
+  whatsappNumber: "584123219381",
   whatsappMessage: "Hola, me comunico desde el portal web del Centro de Especialidades Digestivas. Deseo información sobre las opciones y tarifas disponibles para promocionar mi marca o producto de salud.",
-  email: "comedven@gmail.com",
-  emailSecundario: "info.comedven@gmail.com",
+  email: "info.comedven@gmail.com",
+  emailSecundario: "comedven@gmail.com",
   asuntoEmail: "Propuesta de Patrocinio Comercial / Alianza de Marca - tuendoscopia.com.ve"
 };
 

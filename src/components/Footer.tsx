@@ -37,20 +37,20 @@ export default function Footer() {
           </p>
           <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem' }}>
             <strong>Atención Móvil / WhatsApp:</strong>{' '}
-            <a href="https://wa.me/584127542400" target="_blank" rel="noopener noreferrer" style={{ color: '#67e8f9' }}>
-              0412-7542400
+            <a href="https://wa.me/584123219381" target="_blank" rel="noopener noreferrer" style={{ color: '#67e8f9' }}>
+              0412-3219381
             </a>{' '}
-            / 0412-3219381 / 0424-3050121
+            / 0412-7542400 / 0424-3050121
           </p>
           <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem' }}>
             <strong>Central Telefónica:</strong> 0212-5550340 / 0212-5550211
           </p>
           <p style={{ fontSize: '0.925rem', marginBottom: '1.25rem' }}>
             <strong>Correos:</strong>{' '}
-            <a href="mailto:comedven@gmail.com" style={{ color: '#67e8f9' }}>
-              comedven@gmail.com
+            <a href="mailto:info.comedven@gmail.com" style={{ color: '#67e8f9' }}>
+              info.comedven@gmail.com
             </a>{' '}
-            | info.comedven@gmail.com
+            | comedven@gmail.com
           </p>
           <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.8rem', color: '#94a3b8' }}>
             Nota: Este portal ofrece información médica orientativa y no sustituye la consulta facultativa presencial.
