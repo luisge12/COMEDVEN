@@ -36,21 +36,16 @@ export default function Footer() {
             <strong>Ubicación:</strong> Policlínica La Arboleda, Piso 2, Consultorio 211, San Bernardino, Caracas.
           </p>
           <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem' }}>
-            <strong>Atención Móvil / WhatsApp:</strong>{' '}
+            <strong>Teléfono / WhatsApp:</strong>{' '}
             <a href="https://wa.me/584123219381" target="_blank" rel="noopener noreferrer" style={{ color: '#67e8f9' }}>
               0412-3219381
-            </a>{' '}
-            / 0412-7542400 / 0424-3050121
-          </p>
-          <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem' }}>
-            <strong>Central Telefónica:</strong> 0212-5550340 / 0212-5550211
+            </a>
           </p>
           <p style={{ fontSize: '0.925rem', marginBottom: '1.25rem' }}>
-            <strong>Correos:</strong>{' '}
+            <strong>Correo Electrónico:</strong>{' '}
             <a href="mailto:info.comedven@gmail.com" style={{ color: '#67e8f9' }}>
               info.comedven@gmail.com
-            </a>{' '}
-            | comedven@gmail.com
+            </a>
           </p>
           <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.08)', padding: '0.85rem', borderRadius: 'var(--radius-sm)', fontSize: '0.8rem', color: '#94a3b8' }}>
             Nota: Este portal ofrece información médica orientativa y no sustituye la consulta facultativa presencial.
