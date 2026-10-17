@@ -18,7 +18,7 @@ const EMAIL_CLINICA_SECUNDARIO = ''; // Dejar vacío para pruebas, o 'info.comed
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
     medico: '',
-    servicio: 'Consulta Gastroenterológica General',
+    servicio: '',
     fecha: '',
     turno: 'Mañana (8:00 AM - 12:00 PM)',
     nombre: '',
@@ -32,6 +32,53 @@ export default function AppointmentForm() {
   const [enviado, setEnviado] = useState(false);
   const [enviando, setEnviando] = useState(false);
   const [mensajeError, setMensajeError] = useState<string | null>(null);
+
+  // Médico actualmente seleccionado
+  const selectedMedicoObj = medicosData.find(
+    (m) =>
+      formData.medico === m.id ||
+      formData.medico === m.nombre ||
+      formData.medico === `${m.nombre} (${m.especialidad})`
+  );
+
+  const handleMedicoChange = (nuevoMedico: string) => {
+    const doc = medicosData.find(
+      (m) =>
+        nuevoMedico === m.id ||
+        nuevoMedico === m.nombre ||
+        nuevoMedico === `${m.nombre} (${m.especialidad})`
+    );
+
+    let nuevoServicio = formData.servicio;
+    if (doc) {
+      // Si el servicio previamente seleccionado no está en la lista del médico, seleccionamos el primero de su especialidad
+      if (!doc.servicios.includes(formData.servicio)) {
+        nuevoServicio = doc.servicios[0] || '';
+      }
+    }
+
+    setFormData((prev) => ({
+      ...prev,
+      medico: nuevoMedico,
+      servicio: nuevoServicio,
+    }));
+  };
+
+  const handleServicioChange = (nuevoServicio: string) => {
+    // Si aún no se ha seleccionado especialista, vincular automáticamente al médico que ofrece este servicio
+    if (!formData.medico && nuevoServicio) {
+      const doc = medicosData.find((m) => m.servicios.includes(nuevoServicio));
+      if (doc) {
+        setFormData((prev) => ({
+          ...prev,
+          servicio: nuevoServicio,
+          medico: `${doc.nombre} (${doc.especialidad})`,
+        }));
+        return;
+      }
+    }
+    setFormData((prev) => ({ ...prev, servicio: nuevoServicio }));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -176,7 +223,7 @@ export default function AppointmentForm() {
                 setEnviado(false);
                 setFormData({
                   medico: '',
-                  servicio: 'Consulta Gastroenterológica General',
+                  servicio: '',
                   fecha: '',
                   turno: 'Mañana (8:00 AM - 12:00 PM)',
                   nombre: '',
@@ -205,16 +252,19 @@ export default function AppointmentForm() {
                 </label>
                 <select
                   value={formData.medico}
-                  onChange={(e) => setFormData({ ...formData, medico: e.target.value })}
+                  onChange={(e) => handleMedicoChange(e.target.value)}
                   style={{ width: '100%', padding: '0.75rem', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', backgroundColor: '#fff' }}
                 >
-                  <option value="">Selecciona especialista (opcional)...</option>
+                  <option value="">Selecciona especialista (o ver todos)...</option>
                   {medicosData.map(m => (
                     <option key={m.id} value={`${m.nombre} (${m.especialidad})`}>
                       {m.nombre} - {m.especialidad}
                     </option>
                   ))}
                 </select>
+                <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '0.35rem', display: 'block' }}>
+                  {selectedMedicoObj ? `Especialidad: ${selectedMedicoObj.especialidad}` : 'Elige un médico para filtrar sus procedimientos'}
+                </span>
               </div>
 
               <div>
@@ -223,19 +273,45 @@ export default function AppointmentForm() {
                 </label>
                 <select
                   value={formData.servicio}
-                  onChange={(e) => setFormData({ ...formData, servicio: e.target.value })}
+                  onChange={(e) => handleServicioChange(e.target.value)}
                   style={{ width: '100%', padding: '0.75rem', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-sm)', backgroundColor: '#fff' }}
                   required
                 >
-                  <option value="Consulta Gastroenterológica General">Consulta Gastroenterológica General</option>
-                  <option value="Consulta Hepatológica y Vías Biliares">Consulta Hepatológica y Vías Biliares</option>
-                  <option value="Manometría Anorrectal de Alta Resolución">Manometría Anorrectal de Alta Resolución</option>
-                  <option value="Ultrasonido Endoanal y Endorrectal 360º">Ultrasonido Endoanal y Endorrectal 360º</option>
-                  <option value="Gastroscopia Superior Diagnóstica">Gastroscopia Superior Diagnóstica</option>
-                  <option value="Colonoscopia Total con Sedación">Colonoscopia Total con Sedación</option>
-                  <option value="Test de Aire Espirado (SIBO / Fructosa)">Test de Aire Espirado (SIBO / Fructosa)</option>
-                  <option value="Valoración Quirúrgica / Vesícula Biliar">Valoración Quirúrgica / Vesícula Biliar</option>
+                  {!formData.servicio && (
+                    <option value="" disabled>
+                      Selecciona un procedimiento o servicio...
+                    </option>
+                  )}
+                  {selectedMedicoObj ? (
+                    selectedMedicoObj.servicios.map((s) => (
+                      <option key={s} value={s}>
+                        {s}
+                      </option>
+                    ))
+                  ) : (
+                    <>
+                      <option value="">-- Todos los procedimientos por especialista --</option>
+                      {medicosData.map((m) => (
+                        <optgroup key={m.id} label={`${m.nombre} (${m.especialidad})`}>
+                          {m.servicios.map((s) => (
+                            <option key={`${m.id}-${s}`} value={s}>
+                              {s}
+                            </option>
+                          ))}
+                        </optgroup>
+                      ))}
+                    </>
+                  )}
                 </select>
+                {selectedMedicoObj ? (
+                  <span style={{ fontSize: '0.75rem', color: 'var(--color-primary)', marginTop: '0.35rem', display: 'block', fontWeight: 500 }}>
+                    ✓ Mostrando únicamente procedimientos de {selectedMedicoObj.nombre}
+                  </span>
+                ) : (
+                  <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '0.35rem', display: 'block' }}>
+                    Al elegir un procedimiento se vinculará con su especialista.
+                  </span>
+                )}
               </div>
             </div>
 
