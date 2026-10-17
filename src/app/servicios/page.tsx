@@ -97,7 +97,7 @@ export default function ServiciosPage() {
         
         {/* Encabezado */}
         <div className="section-title-wrap reveal-up" style={{ maxWidth: '850px' }}>
-          <span className="section-tag">Cartera de Procedimientos</span>
+          <span className="section-tag">Procedimientos Médicos & Quirúrgicos</span>
           <h1 className="section-title">¿Qué Ofrecemos?</h1>
           <p style={{ color: 'var(--color-text-main)', marginTop: '1.25rem', fontSize: '1.15rem', lineHeight: '1.8' }}>
             Nuestra unidad cuenta con una amplia gama de equipos especializados y personal altamente calificado para el diagnóstico y tratamiento de las enfermedades que afectan al sistema digestivo, al colon, al recto y al ano, garantizando a nuestros pacientes una atención multidisciplinaria y así ofrecer siempre la mejor opción de tratamiento.

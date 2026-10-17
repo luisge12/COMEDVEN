@@ -167,7 +167,7 @@ export default function Home() {
       <section className="section" style={{ backgroundColor: '#ffffff' }}>
         <div className="container">
           <div className="section-title-wrap reveal-up">
-            <span className="section-tag">Cartera de Procedimientos</span>
+            <span className="section-tag">Procedimientos Especializados</span>
             <h2 className="section-title">Servicios Clínicos Especializados</h2>
             <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.05rem' }}>
               Equipos de última generación para diagnóstico y tratamiento del sistema digestivo.
