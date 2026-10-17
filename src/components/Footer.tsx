@@ -32,8 +32,25 @@ export default function Footer() {
 
         <div>
           <h4 style={{ color: '#ffffff', fontSize: '1.05rem', marginBottom: '1.25rem' }}>Canales Oficiales & Ubicación</h4>
-          <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem' }}>
-            <strong>Ubicación:</strong> Policlínica La Arboleda, Piso 2, Consultorio 211, San Bernardino, Caracas.
+          <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem', lineHeight: '1.6' }}>
+            <strong>Ubicación:</strong>{' '}
+            <a
+              href="https://maps.app.goo.gl/TgtAUNNr5yodezkW6?g_st=ipc"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: '#67e8f9',
+                textDecoration: 'underline',
+                textUnderlineOffset: '3px',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.35rem'
+              }}
+              title="Abrir ubicación en Google Maps"
+            >
+              <span>Policlínica La Arboleda, Piso 2, Consultorio 211, San Bernardino, Caracas</span>
+              <span>📍</span>
+            </a>
           </p>
           <p style={{ fontSize: '0.925rem', marginBottom: '0.5rem' }}>
             <strong>Teléfono / WhatsApp:</strong>{' '}

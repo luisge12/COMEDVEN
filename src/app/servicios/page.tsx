@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Servicios & Procedimientos | Centro de Endoscopias y Especialidades Digestivas',
-  description: 'Unidad médica y quirúrgica de alta tecnología: Endoscopias, Ultrasonido Endoanal 360º, Biofeedback, Láser Diodo y Cirugía Colorrectal Mínimamente Invasiva.',
+  description: 'Unidad médica y quirúrgica de alta tecnología: Endoscopias, Ultrasonido Endoanal 360º, Manometría Anorrectal de Alta Resolución, Biofeedback, Láser Diodo y Cirugía Colorrectal Mínimamente Invasiva.',
 };
 
 export default function ServiciosPage() {
@@ -12,16 +12,16 @@ export default function ServiciosPage() {
       categoria: "Endoscopia Digestiva & Diagnóstico de Alta Resolución",
       items: [
         {
-          titulo: "Endoscopias Digestivas Avanzadas",
-          detalle: "Gastroscopias, colonoscopias totales y rectosigmoidoscopias diagnósticas y terapéuticas bajo monitorización y confort del paciente."
+          titulo: "Endoscopia Digestiva Superior o Gastroscopia",
+          detalle: "Exploración endoscópica del esófago, estómago y duodeno para el diagnóstico y tratamiento de reflujo, gastritis, úlceras y lesiones digestivas altas bajo sedación y confort."
         },
         {
-          titulo: "Anoscopias & Rectoscopias Rígidas",
-          detalle: "Anoscopias simples y exploraciones con rectoscopio rígido para evaluación inmediata del conducto ano-rectal."
+          titulo: "Endoscopia Digestiva Inferior o Colonoscopia",
+          detalle: "Estudio exhaustivo de la mucosa de todo el colon y recto para la detección oportuna y resección de pólipos, prevención del cáncer colorrectal y control inflamatorio."
         },
         {
-          titulo: "Citología Anal & Anoscopia Magnificada",
-          detalle: "Detección precoz de lesiones premalignas con magnificación óptica de alta resolución y cribado celular especializado."
+          titulo: "Rectosigmoidoscopia Rígida y Flexible",
+          detalle: "Evaluación endoscópica del recto y colon sigmoide para el diagnóstico de sangrado digestivo bajo, pólipos distales y patología anorrectal baja."
         }
       ]
     },
@@ -33,18 +33,22 @@ export default function ServiciosPage() {
           detalle: "Equipamiento de vanguardia para la evaluación tridimensional y en 360 grados del aparato esfinteriano, fístulas y lesiones rectales."
         },
         {
-          titulo: "Ecografía Integral & Partes Blandas",
-          detalle: "Ultrasonidos abdominales, pélvicos, transvaginales, transrectales y valoración ecográfica de tejidos y partes blandas."
+          titulo: "Ecografía Integral",
+          detalle: "Ultrasonidos abdominales y pélvicos."
         },
         {
-          titulo: "Estudios Dinámicos & Ecofistulografía",
-          detalle: "Estudios de tránsito colónico, videodefecografía, ecofistulografía y mapeo anatómico riguroso de fístulas anorrectales."
+          titulo: "Estudios de Tránsito Colónico",
+          detalle: "Evaluación funcional del tiempo de motilidad colónica y videodefecografía para el diagnóstico certero del estreñimiento crónico y trastornos evacuatorios."
         }
       ]
     },
     {
       categoria: "Fisiología Anorrectal & Terapias de Rehabilitación",
       items: [
+        {
+          titulo: "Manometría Anorrectal de Alta Resolución",
+          detalle: "Estudio diagnóstico de referencia para la cuantificación precisa de las presiones esfinterianas, sensibilidad rectal, reflejos recto-anales y valoración integral del estreñimiento crónico e incontinencia fecal."
+        },
         {
           titulo: "Terapia de Biofeedback Anorrectal",
           detalle: "Reentrenamiento neuromuscular y biorretroalimentación asistida para trastornos evacuatorios, anismo y disinergia del piso pélvico."
@@ -59,7 +63,7 @@ export default function ServiciosPage() {
       categoria: "Procedimientos Ambulatorios & Tecnología Láser Diodo",
       items: [
         {
-          titulo: "Cirugía Menor Ambulatoria (Anestesia Local Infiltrativa)",
+          titulo: "Cirugía Menor",
           detalle: "Resección de plicomas anales, resección de condilomas, ligadura hemorroidal elástica y hemorroidectomías ambulatorias con rápida recuperación."
         },
         {
@@ -76,12 +80,12 @@ export default function ServiciosPage() {
           detalle: "Abordaje laparoscópico avanzado para patologías colónicas, rectales y anorrectales tanto oncológicas como benignas."
         },
         {
-          titulo: "Cirugía de Pared Abdominal & Vesícula Biliar",
-          detalle: "Resolución quirúrgica de hernias inguinales, umbilicales y de la pared abdominal, así como colecistectomía por patología de vesícula biliar."
+          titulo: "Cirugía de Pared Abdominal, Vesícula Biliar & Apéndice",
+          detalle: "Resolución quirúrgica de hernias inguinales, umbilicales y de la pared abdominal, así como colecistectomía por patología de vesícula biliar y cirugía de apéndice (apendicectomía)."
         },
         {
           titulo: "Cirugía Ginecológica, Piso Pélvico & Mamas",
-          detalle: "Procedimientos quirúrgicos de prolapsos de órganos pélvicos, patologías de útero y ovarios, y abordaje de afecciones mamarias benignas y malignas."
+          detalle: "Procedimientos quirúrgicos de prolapsos de órganos pélvicos."
         }
       ]
     }
@@ -158,13 +162,10 @@ export default function ServiciosPage() {
             Infraestructura Hospitalaria & Respaldo
           </span>
           <h2 style={{ color: 'var(--color-primary-dark)', fontSize: '1.6rem', margin: '0.5rem 0 1rem 0', fontFamily: 'var(--font-family-heading)' }}>
-            Alianza Institucional con La Policlínica La Arboleda
+            Instalaciones Clínicas de Primer Nivel
           </h2>
-          <p style={{ color: 'var(--color-text-main)', fontSize: '1rem', lineHeight: '1.8', marginBottom: '1.5rem' }}>
-            Nuestra alianza con La Policlínica La Arboleda nos hace contar con instalaciones de primer nivel y recursos tecnológicos adecuados a las necesidades de nuestros pacientes como: laboratorio clínico, servicio de Rx, hospitalización, terapia intensiva, banco de sangre y quirófanos de última generación para los procedimientos de cirugía abierta y laparoscópica.
-          </p>
-          <p style={{ color: 'var(--color-text-muted)', fontSize: '0.95rem', lineHeight: '1.7', marginBottom: '2rem' }}>
-            Asimismo, contamos con el apoyo directo de médicos especialistas en todas las áreas interconectadas: Medicina Interna, Cardiología, Endocrinología, Anestesiología, Oncología, Infectología, Psiquiatría y Nutrición.
+          <p style={{ color: 'var(--color-text-main)', fontSize: '1rem', lineHeight: '1.8', marginBottom: '2rem' }}>
+            Contamos con instalaciones de primer nivel y recursos clínicos avanzados en la Policlínica La Arboleda, Grupo Médico Santa Paula y Policlínica Metropolitana: laboratorio clínico, servicio de Rx, hospitalización, terapia intensiva y quirófanos de última generación para cirugías abiertas y laparoscópicas.
           </p>
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
@@ -13,7 +14,7 @@ export default function Navbar() {
     { href: '/nosotros', label: 'Nosotros' },
     { href: '/equipo-medico', label: 'Equipo Médico' },
     { href: '/servicios', label: 'Servicios' },
-    { href: '/directorio', label: 'Directorio Médico' },
+    { href: '/directorio', label: 'Patologías' },
     { href: '/blog', label: 'Blog' },
   ];
 
@@ -32,11 +33,38 @@ export default function Navbar() {
           boxShadow: 'var(--shadow-sm)'
         }}
       >
-        <div className="container navbar-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '75px' }}>
+        <div
+          className="navbar-container"
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            height: '80px',
+            maxWidth: '1520px',
+            width: '100%',
+            margin: '0 auto',
+            padding: '0 2rem'
+          }}
+        >
           
           {/* Logotipo */}
-          <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 800, fontSize: '1.15rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)', textDecoration: 'none' }}>
-            <span>Centro de Especialidades Digestivas</span>
+          <Link href="/" className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', fontWeight: 800, fontSize: '1.2rem', color: 'var(--color-primary)', fontFamily: 'var(--font-family-heading)', textDecoration: 'none' }}>
+            <Image
+              src="/Logo.png"
+              alt="Logo Centro de Especialidades Digestivas"
+              width={60}
+              height={52}
+              priority
+              style={{
+                objectFit: 'contain',
+                flexShrink: 0,
+                width: 'auto',
+                height: '52px'
+              }}
+            />
+            <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+              Centro de Especialidades Digestivas
+            </span>
           </Link>
 
           {/* Botón Hamburguesa para Móviles y Tablets */}

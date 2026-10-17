@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   return {
-    title: `${enfermedad.nombre} | Directorio Médico`,
+    title: `${enfermedad.nombre} | Patologías`,
     description: enfermedad.publicoGeneral.resumen,
   };
 }
@@ -35,7 +35,7 @@ export default async function EnfermedadDetallePage({ params }: Props) {
         
         <div style={{ marginBottom: '2rem' }}>
           <Link href="/directorio" style={{ color: 'var(--color-primary)', fontWeight: 600, fontSize: '0.9rem' }}>
-            ← Volver al Directorio de Enfermedades
+            ← Volver al Catálogo de Patologías
           </Link>
         </div>
 

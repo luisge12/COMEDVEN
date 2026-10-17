@@ -56,19 +56,5 @@ export const medicosData: Medico[] = [
     ],
     dias: "Lunes a Sábado",
     horario: "Previa Cita"
-  },
-  {
-    id: "dra-zerimar-fernandez",
-    nombre: "Dra. Zerimar Fernández",
-    especialidad: "Nutrición Clínica & Salud Digestiva",
-    iniciales: "ZF",
-    formacion: [
-      "Nutrición y Dietética – Universidad Rómulo Gallegos – Venezuela",
-      "Nutrición Clínica – Universidad Central de Venezuela, Hospital Clínico Universitario",
-      "Gastroenterología – Universidad Central de Venezuela – Hospital Domingo Luciani",
-      "Especialista en Estreñimiento Funcional"
-    ],
-    dias: "Lunes a Viernes",
-    horario: "Previa Cita"
   }
 ];

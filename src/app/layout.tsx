@@ -7,8 +7,8 @@ import ScrollRevealObserver from '@/components/ScrollRevealObserver';
 
 export const metadata: Metadata = {
   title: 'Centro de Especialidades Digestivas | Gastroenterología & Endoscopia',
-  description: 'Centro médico especializado en gastroenterología, endoscopia digestiva de alta resolución, hepatología y cirugía del aparato digestivo. Citas y directorio médico.',
-  keywords: ['gastroenterología', 'endoscopia', 'colonoscopia', 'reflujo', 'SIBO', 'hígado graso', 'citas médicas digestivas'],
+  description: 'Centro médico especializado en gastroenterología, endoscopia digestiva de alta resolución, hepatología y cirugía del aparato digestivo. Citas y catálogo de patologías.',
+  keywords: ['gastroenterología', 'endoscopia', 'colonoscopia', 'reflujo', 'SIBO', 'hígado graso', 'patologías digestivas'],
   openGraph: {
     title: 'Centro de Especialidades Digestivas',
     description: 'Atención médica integral en gastroenterología y endoscopia diagnóstica y terapéutica.',

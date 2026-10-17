@@ -229,6 +229,8 @@ export default function AppointmentForm() {
                 >
                   <option value="Consulta Gastroenterológica General">Consulta Gastroenterológica General</option>
                   <option value="Consulta Hepatológica y Vías Biliares">Consulta Hepatológica y Vías Biliares</option>
+                  <option value="Manometría Anorrectal de Alta Resolución">Manometría Anorrectal de Alta Resolución</option>
+                  <option value="Ultrasonido Endoanal y Endorrectal 360º">Ultrasonido Endoanal y Endorrectal 360º</option>
                   <option value="Gastroscopia Superior Diagnóstica">Gastroscopia Superior Diagnóstica</option>
                   <option value="Colonoscopia Total con Sedación">Colonoscopia Total con Sedación</option>
                   <option value="Test de Aire Espirado (SIBO / Fructosa)">Test de Aire Espirado (SIBO / Fructosa)</option>

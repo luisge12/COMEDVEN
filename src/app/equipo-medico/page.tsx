@@ -5,7 +5,7 @@ import { medicosData } from '@/data/medicos';
 
 export const metadata: Metadata = {
   title: 'Equipo Médico | Centro de Especialidades Digestivas',
-  description: 'Conoce a nuestros especialistas en Coloproctología, Gastroenterología de adultos y pediátrica, y Nutrición en Salud Digestiva.',
+  description: 'Conoce a nuestros especialistas en Coloproctología, Gastroenterología de adultos y pediátrica.',
 };
 
 export default function EquipoMedicoPage() {
@@ -18,7 +18,7 @@ export default function EquipoMedicoPage() {
           <span className="section-tag">Cuerpo Facultativo</span>
           <h1 className="section-title">Nuestros Especialistas</h1>
           <p style={{ color: 'var(--color-text-muted)', marginTop: '0.75rem', fontSize: '1.1rem' }}>
-            Un equipo multidisciplinario altamente calificado en patologías digestivas, proctológicas, pediátricas y nutrición clínica.
+            Un equipo multidisciplinario altamente calificado en patologías digestivas, proctológicas y pediátricas.
           </p>
         </div>
 

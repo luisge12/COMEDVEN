@@ -477,9 +477,11 @@ html {
   }
 
   .navbar-container {
-    height: 52px !important;
+    height: 56px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   /* Nombre institucional optimizado y limpio */
@@ -491,6 +493,11 @@ html {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     max-width: calc(100% - 50px) !important;
+  }
+
+  .nav-logo img {
+    height: 38px !important;
+    width: auto !important;
   }
 
   /* Botón hamburguesa discreto a la derecha */
