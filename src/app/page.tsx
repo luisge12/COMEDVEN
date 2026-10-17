@@ -331,6 +331,11 @@ export default function Home() {
                   <h3 style={{ color: 'var(--color-primary-dark)', fontSize: '1.15rem', marginBottom: '0.45rem', lineHeight: '1.3', fontFamily: 'var(--font-family-heading)' }}>
                     {m.nombre}
                   </h3>
+                  {m.sociedades && (
+                    <div style={{ fontSize: '0.72rem', color: 'var(--color-primary)', backgroundColor: 'var(--color-primary-light)', padding: '0.2rem 0.5rem', borderRadius: 'var(--radius-sm)', display: 'inline-block', marginBottom: '0.45rem', fontWeight: 600 }}>
+                      🏛️ {m.sociedades}
+                    </div>
+                  )}
                   <p style={{ color: 'var(--color-text-muted)', fontSize: '0.8rem', marginBottom: '1rem', lineHeight: '1.4' }}>
                     {m.dias} &bull; {m.horario}
                   </p>

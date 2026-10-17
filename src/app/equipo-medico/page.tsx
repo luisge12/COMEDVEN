@@ -36,7 +36,7 @@ export default function EquipoMedicoPage() {
                 borderLeft: '4px solid var(--color-primary)'
               }}
             >
-              {/* Columna Izquierda: Iniciales e Identificación */}
+              {/* Columna Izquierda: Fotografía e Identificación */}
               <div style={{
                 backgroundColor: 'var(--color-primary-light)',
                 borderRadius: 'var(--radius-md)',
@@ -50,11 +50,10 @@ export default function EquipoMedicoPage() {
                 {medico.imagen ? (
                   <div style={{
                     position: 'relative',
-                    width: '150px',
-                    height: '150px',
+                    width: '215px',
+                    height: '215px',
                     borderRadius: 'var(--radius-full)',
                     overflow: 'hidden',
-                    marginBottom: '1rem',
                     boxShadow: 'var(--shadow-md)',
                     border: '4px solid #ffffff',
                     backgroundColor: '#ffffff'
@@ -63,7 +62,7 @@ export default function EquipoMedicoPage() {
                       src={medico.imagen}
                       alt={medico.nombre}
                       fill
-                      sizes="300px"
+                      sizes="400px"
                       quality={95}
                       style={{
                         objectFit: 'cover',
@@ -73,58 +72,67 @@ export default function EquipoMedicoPage() {
                   </div>
                 ) : (
                   <div style={{
-                    width: '150px',
-                    height: '150px',
+                    width: '215px',
+                    height: '215px',
                     borderRadius: 'var(--radius-full)',
                     backgroundColor: 'var(--color-primary)',
                     color: '#ffffff',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    fontSize: '2.5rem',
+                    fontSize: '3.5rem',
                     fontWeight: 800,
-                    marginBottom: '1rem',
                     boxShadow: 'var(--shadow-md)',
                     border: '4px solid #ffffff'
                   }}>
                     {medico.iniciales}
                   </div>
                 )}
-
-                {medico.sociedades && (
-                  <div style={{
-                    fontSize: '0.75rem',
-                    color: 'var(--color-primary-dark)',
-                    backgroundColor: '#ffffff',
-                    padding: '0.4rem 0.75rem',
-                    borderRadius: 'var(--radius-sm)',
-                    border: '1px solid var(--color-border)',
-                    marginTop: '0.75rem',
-                    lineHeight: '1.4'
-                  }}>
-                    <strong style={{ display: 'block', fontSize: '0.65rem', textTransform: 'uppercase', color: 'var(--color-accent)', letterSpacing: '0.05em', marginBottom: '0.15rem' }}>
-                      Sociedades Científicas:
-                    </strong>
-                    {medico.sociedades}
-                  </div>
-                )}
               </div>
 
-              {/* Columna Derecha: Nombre, Especialidad y Formación */}
+              {/* Columna Derecha: Nombre, Especialidad, Sociedades y Formación */}
               <div>
                 <span style={{
                   display: 'inline-block',
                   fontSize: '0.8rem',
                   fontWeight: 700,
                   color: 'var(--color-accent)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.04em',
                   marginBottom: '0.35rem'
                 }}>
                   {medico.especialidad}
                 </span>
                 
-                <h2 style={{ color: 'var(--color-primary-dark)', fontSize: '1.75rem', marginBottom: '1.25rem', fontFamily: 'var(--font-family-heading)' }}>
+                <h2 style={{ color: 'var(--color-primary-dark)', fontSize: '1.75rem', marginBottom: medico.sociedades ? '0.65rem' : '1.25rem', fontFamily: 'var(--font-family-heading)' }}>
                   {medico.nombre}
                 </h2>
+
+                {/* Sociedades Científicas - Ubicado a la derecha de la foto */}
+                {medico.sociedades && (
+                  <div style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.6rem',
+                    backgroundColor: 'var(--color-primary-light)',
+                    border: '1px solid #cbd5e1',
+                    borderLeft: '4px solid var(--color-accent)',
+                    padding: '0.45rem 0.9rem',
+                    borderRadius: 'var(--radius-sm)',
+                    marginBottom: '1.25rem',
+                    fontSize: '0.85rem'
+                  }}>
+                    <span style={{ fontSize: '1rem' }}>🏛️</span>
+                    <div>
+                      <strong style={{ display: 'block', fontSize: '0.68rem', textTransform: 'uppercase', color: 'var(--color-accent)', letterSpacing: '0.05em' }}>
+                        Sociedades Científicas:
+                      </strong>
+                      <span style={{ fontWeight: 600, color: 'var(--color-primary-dark)' }}>
+                        {medico.sociedades}
+                      </span>
+                    </div>
+                  </div>
+                )}
 
                 {/* Formación y Trayectoria Académica */}
                 <div style={{ marginBottom: '1.5rem' }}>
