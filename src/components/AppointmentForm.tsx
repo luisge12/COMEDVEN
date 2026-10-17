@@ -262,9 +262,6 @@ export default function AppointmentForm() {
                     </option>
                   ))}
                 </select>
-                <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '0.35rem', display: 'block' }}>
-                  {selectedMedicoObj ? `Especialidad: ${selectedMedicoObj.especialidad}` : 'Elige un médico para filtrar sus procedimientos'}
-                </span>
               </div>
 
               <div>
@@ -303,15 +300,6 @@ export default function AppointmentForm() {
                     </>
                   )}
                 </select>
-                {selectedMedicoObj ? (
-                  <span style={{ fontSize: '0.75rem', color: 'var(--color-primary)', marginTop: '0.35rem', display: 'block', fontWeight: 500 }}>
-                    ✓ Mostrando únicamente procedimientos de {selectedMedicoObj.nombre}
-                  </span>
-                ) : (
-                  <span style={{ fontSize: '0.75rem', color: 'var(--color-text-muted)', marginTop: '0.35rem', display: 'block' }}>
-                    Al elegir un procedimiento se vinculará con su especialista.
-                  </span>
-                )}
               </div>
             </div>
 
