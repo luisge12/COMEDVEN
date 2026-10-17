@@ -100,7 +100,7 @@ export default function GoogleReviews() {
           }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.2rem' }}>
               <span style={{ fontSize: '1.45rem', fontWeight: 800, color: 'var(--color-primary-dark)' }}>
-                4.9
+                5.0
               </span>
               <div style={{ display: 'flex', color: '#f59e0b', fontSize: '1.25rem' }}>
                 {'★★★★★'}
